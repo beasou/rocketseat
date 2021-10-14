@@ -1,0 +1,111 @@
+<!--Comentários são top e se colocam assim-->
+
+<!--ELEMENTOS(abre e fecha tag <tag></tag>)-->
+<h1>Título</h1> 
+
+<!--ELEMENTOS VAZIOS(abre a tag e não fecha)-->
+<img src="" alt=""> 
+<input type="text">
+
+<hr>
+
+<!--ATRIBUTOS HTML -->
+ 
+<img src="conteudo" alt="texto">
+<br>
+<!--Atributos booleanos(não precisam de conteúdo(disable))-->
+<input type="text" disabled>
+
+<hr>
+
+<!--ASPAS(omissão, simples, dupla)-->
+<a href="google.com" title="Aspas"> link </a>
+
+<hr>
+
+<!--ATRIBUTOS GLOBAIS MAIS UTILIZADOS
+    -classe
+    -contenteditable="true" CONSIGO EDITAR 
+    -data-* PODE SER ESCRITO COM SEPARAÇÃO COM - OU SEM SEPARAÇÃO
+    -hidden VAI ESCONDER UMA TAG
+    -id PODE SER USADO UM UNICO ID POR TAG
+    -style
+    -tabindex QND EU NAVEGAR C/ TAB EM UMA PAGINA ELE VAI NA SEQUENCIA QUE FOI ADD
+    -title
+-->
+<div class="aula" contenteditable="true" title="Definir um titulo"> 
+    conteúdo dentro
+</div>
+<div class="aula" data-qualquercoisapode-ser-escrita-aqui="" id="name1">
+    conteúdo
+</div>
+<div class="aula" hidden id="name2" tabindex="2"> 
+    conteúdo 
+</div>
+<div class="aula" style="color: red" tabindex="1"> 
+    conteúdo 
+</div>
+
+<!--ALINHAMENTO DE taGS uma dentro da outra
+    - Hierarquia (<pai><filha></filha></pai>)
+    - Fluxo
+    - Posicionamento
+-->
+    <p> Vou <em>escrever</em> um parágrafro</p>
+    <p> esse é o fluxo,</br>o p tem um posicionamento 
+    que tem a quebra da linha assim como o /br</p>
+
+<!-- 
+    Vamos praticar?
+
+    Escrever 2 parágrafos, dando ênfase e importância
+    para algumas palavras, e adione um link de saiba mais.
+
+    -use a tag em para ênfase
+    -use a tag strong para importancia
+    -o link pode levar para o google.
+-->
+<p>
+    Lorem <em>ipsum dolor</em> sit amet, consectet ut labore et dolore magna aliqu
+</p>
+
+<p>
+    Lorem ipsum dolor sit amet,<strong>consectet ut labore et dolore magna aliqu</strong> 
+</p>
+
+<a href="http://google.com/">Saiba mais</a>
+
+<!-- 
+    Conteúdo do texto e
+    caracteres reservados.
+-->
+<p>
+    &nbsp;<!--caracter especial-->
+    &lt;&gt;
+    &amp;
+    &quot;&quot;
+    os espaços
+    que colocamos 
+    alem das quebras de linha são 
+    ignorados.
+</p>
+
+<!-- 
+    Anatomia de um documento HTML
+-->
+<!DOCTYPE html>
+    <html lang="pt_BR"> 
+        <head>
+            <meta charset="utf-8"> <!--está dizendo que agora aceita a maioria dos caracteres de texto na pagina-->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--visivel tanto em dispositivos móveis e telas maiores-->
+            <title>Titulo da Aba do navegador</title>
+        </head>
+        <body>
+            <!--aqui vai tudo que vai ser colocado em "tela" 
+                EX o que foi aprendido de texto até agora-->
+        </body>
+    </html>
+
+<!--
+    Criando projetos - criarpasta/finalização do conteúdo básico
+ -->
