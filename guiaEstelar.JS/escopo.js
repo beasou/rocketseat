@@ -37,7 +37,7 @@ console.log ('> existe x depois do bloco?', x); // existe valor = 0
 
 //----------------------------------------------------------------
 
-// cont e let são globais e só funionam no escopo onde foi criada
+// cont e let não são globais e só funionam no escopo onde foi criada
 
     console.log ('>existe y antes do bloco?', y); //erro, pois está fora do escopo
 

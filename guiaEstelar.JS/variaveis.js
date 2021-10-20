@@ -22,8 +22,8 @@
     clima = "Frio"; //retribuindo o valor 
     console.log(clima);
 
-    const clima = "Quente"; 
-    clima = "Frio"; //erro
+    const clima1 = "Quente"; 
+    clima1 = "Frio"; //erro pois não pode retrubir valor a const
     console.log(clima);
 
 //--------------------------------------------------------------------------

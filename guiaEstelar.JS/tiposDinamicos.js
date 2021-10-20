@@ -10,9 +10,9 @@
     let clima = true;
     console.log(typeof clima);
 
-    let clima = "";
-    console.log(typeof clima);
+    let clima1 = "";
+    console.log(typeof clima1);
 
-    let clima = 0;
-    console.log(typeof clima);
+    let clima2 = 0;
+    console.log(typeof clima2);
     
