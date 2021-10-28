@@ -43,3 +43,17 @@
     console.log(false ? 'alo' : 'nada')
 
 //Como você pode observar, temos no unário um elemento, no binário dois elementos e no ternário três elementos.
+
+//------------------------------------------------------------
+/* 
+    NEW --> A expressão new, também denominada como left-hand-side expression, serve para criar um novo objeto usando as funções construtoras que temos por padrão no JavaScript.
+
+    -left-hand-side expression 
+    -criar um novo objeto
+*/
+
+    let nome = new String('Bea')
+    nome.sobNome = "Sou"
+    let idade = new Number(26)
+    console.log(nome, idade)
+    console.log(nome.sobNome,idade)
