@@ -77,5 +77,35 @@
 
 //------------------------------------------------------------
 /*
-    OPERADORES ARITIMÉTICOS 
+    OPERADORES ARITMÉTICOS 
 */
+
+    //multiplicação *
+    console.log(2.3*5)
+
+    //divisão /
+    console.log(2.3/5)
+
+    //soma +
+    console.log(2.3+5)
+
+    //subtração -
+    console.log(2.3-5)
+
+    //resto da divisão %
+    console.log(2.3 % 5)
+    let remainder = 11 % 3
+    console.log(remainder)
+
+    //incremento ++
+    let increment = 0
+    increment++
+    console.log(increment)
+
+    //decremento --
+    let decrement = 0
+    decrement--
+    console.log(decrement)
+
+    //exponencial **
+    console.log(3**3)
