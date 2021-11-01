@@ -109,3 +109,15 @@
 
     //exponencial **
     console.log(3**3)
+
+//------------------------------------------------------------
+/*
+    Grouping operator () operador que agrupa expressões 
+*/
+
+    let total = 2 + 3 * 5 //precedencia, multiplicação depois soma
+    console.log(total)
+
+    total = (2 + 3) * 5 //agora a soma é realizada antes
+    console.log(total)
+       
