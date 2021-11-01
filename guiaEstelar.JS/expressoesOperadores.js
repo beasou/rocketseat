@@ -57,3 +57,25 @@
     let idade = new Number(26)
     console.log(nome, idade)
     console.log(nome.sobNome,idade)
+
+//------------------------------------------------------------
+/*
+    OPERADORES UNÁRIOS
+     -typeof
+     -delete
+*/
+
+    console.log(typeof nome)
+
+    const pessoa ={
+        nome: "Bea", 
+        idade: 26,
+    }
+    console.log (pessoa)
+    delete pessoa.idade
+    console.log (pessoa)
+
+//------------------------------------------------------------
+/*
+    OPERADORES ARITIMÉTICOS 
+*/
