@@ -281,3 +281,24 @@
     console.log(0 ? 'verdadeiro':'falso') //falsy, o 0 está sendo comparado a nada o js converte em falsy
 
     console.log({} ? 'verdadeiro':'falso')
+
+//---------------------------------------------------------------------------
+/* 
+    PRECEDÊNCIA DOS OPERADORES (operator precedence)
+        -grouping                   ()
+        -negação e incremento       ! ++ --
+        -multiplicação e divisão    * /
+        -adição e subtração         + -
+        -relacional                 < <= > >= 
+        -igualdade                  == != === !==
+        -AND                        &&
+        -OR                         ||
+        -condicional                ?:
+        -assignment(atribuição )    = += -= *=
+*/
+
+    console.log(2 + 5 * 10) //52
+    console.log((2 + 5) * 10) //70
+    console.log(3 > 2) //true
+    console.log(3 > 2 > 1) // 3 > 2 = true, true é maior que 1? false
+    console.log(3 > 2 && 2 > 1)
