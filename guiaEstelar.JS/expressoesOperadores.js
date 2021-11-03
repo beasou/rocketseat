@@ -236,5 +236,22 @@
     const maiorIdade = age1 >= 18 ? 'Maior idade' : 'Menor idade'
     console.log(maiorIdade)
 
+//--------------------------------------------------------------------
+/* 
+    OPERADORES PARA STRING (String operator)
+*/
+    //comparison (comparação)
+    console.log('a' == 'b')
 
+    //concatenation (concatenação)
+    //retorna a união de duas Strings
+    console.log('a' + 'b')
 
+    let alpha = "Alpha"
+    alpha += "bet"
+    console.log (alpha)//console.log (alpha += "bet")
+
+//----------------------------------------------------------------------
+/* 
+
+*/
