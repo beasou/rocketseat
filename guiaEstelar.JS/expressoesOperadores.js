@@ -167,3 +167,45 @@
     console.log(one <= 1)
     console.log(one <= 0)
 
+//------------------------------------------------------------------
+/*
+    OPERADORES DE ATRIBUIÇÃO (Assignment)
+*/
+    let n
+
+    //assignment
+    n = 1 
+    console.log(n)
+
+    //addiction assignment 
+    n += 2
+    console.log(n)
+
+    //subtraction assignment 
+    n -=1
+    console.log(n)
+
+    //multiplication assignment
+    n *= 2
+    console.log(n)
+
+    //division assignment 
+    n /=2
+    console.log(n)
+
+    //remainder, exponetiation
+    n %= 2
+    console.log(n)
+
+    n **=2
+    console.log(n)
+
+//--------------------------------------------------------------------
+/* 
+
+*/
+    
+
+
+
+
