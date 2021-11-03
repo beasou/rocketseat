@@ -218,6 +218,23 @@
     //NOT !
     console.log(!pao)
 
+//--------------------------------------------------------------------
+/*
+    OPERADOR CONDICIONAL (TERNÁRIO)
+        -dependendo da condição, nós recebemos valores diferentes 
+        -condição então valor 1 se não valaor 2 
+        -condition ? value1 :value 2 
+*/
+    //Exemplos
+    //café da manhã top
+
+    const niceBreakfast = pao && queijo ? 'Café top' : 'Café ruim'
+    console.log(niceBreakfast)
+
+    //maior de 18
+    let age1 = 16
+    const maiorIdade = age1 >= 18 ? 'Maior idade' : 'Menor idade'
+    console.log(maiorIdade)
 
 
 
