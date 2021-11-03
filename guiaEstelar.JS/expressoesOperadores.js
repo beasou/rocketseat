@@ -253,5 +253,31 @@
 
 //----------------------------------------------------------------------
 /* 
+    FALSY E TRUTHY
 
+    FALSY- quando um valor é considerado false em contextos onde um booleano é 
+    obrigatório(condicionais e loops)
+        false 
+            0
+            -0
+            ""
+            null
+            undefined
+            NaN
+
+    TRUTHY- quando um valor é considerado true em contextos onde um booleado é obrigatório (condicionais e loops)
+        true
+            {}
+            []
+            1
+            1.23
+            "0"
+            "false"
+            -1
+            Infinity
+            -Infinity
 */
+
+    console.log(0 ? 'verdadeiro':'falso') //falsy, o 0 está sendo comparado a nada o js converte em falsy
+
+    console.log({} ? 'verdadeiro':'falso')
