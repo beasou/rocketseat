@@ -25,3 +25,16 @@
     }
 
 //--------------------------------------------------------
+/*
+    FOR...OF
+*/
+    let name2 = 'Bea'
+    let names=['João','Paulo', 'Pedro']
+
+    for(let char of name2){
+        console.log(char)
+    }
+
+    for(let name of names){
+        console.log(name)
+    }
