@@ -38,3 +38,18 @@
     for(let name of names){
         console.log(name)
     }
+
+//--------------------------------------------------------
+/*
+    FOR...IN - CRIAR UM LOOP PEGANDO AS PROPRIEDADES DE UM OBJ
+*/
+    let pessoas = { 
+        nomes: 'John',
+        idades: 34,
+        peso: 88.8
+    }
+
+    for(let propriedade in pessoas){
+        console.log(propriedade)
+        console.log(pessoas[propriedade])
+    }
