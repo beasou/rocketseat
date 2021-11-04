@@ -64,5 +64,22 @@
     console.log(calculate(2,"*",2))
     console.log(calculate(2,"/",2))
     console.log(calculate(2,"%",2))
-    
+
 //--------------------------------------------------------
+/*
+    THROW E TRY/CATCH
+*/
+    //throw
+    function sayMyName1(name =''){
+        if(name === ''){
+            throw new Error("Nome é obrigatório")
+        }
+        console.log(name)
+    }
+    //try catch
+    try { //disparar
+        //sayMyName1()
+        sayMyName1("Bea")
+    }catch(e){//captuar o erro
+        console.log(e)
+    }
