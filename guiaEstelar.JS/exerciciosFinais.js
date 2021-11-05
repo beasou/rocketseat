@@ -50,17 +50,32 @@
         Agora, crie uma função que irá calcular o total de receitas e despesas e irá mostrar uma mensagem se a familia está com saldo positivo ou negativo, seguido do valor do saldo
             
 */
+    let gastoFamiliar = {
+        receitas:[100, 20, 20, 30],
+        despesas:[30, 60, 80, 90]
+    }
+    function somaTotal(array){
+        let total = 0;
+        for(let valor of array){
+            total += valor
+        }
+        return total
+    }
+    function saldo(){
+        const saldoReceitas = somaTotal(gastoFamiliar.receitas)
+        console.log("Receitas:" + saldoReceitas +" R$")
+        const saldoDespesas = somaTotal(gastoFamiliar.despesas)
+        console.log("Despesas:" + saldoDespesas +" R$")
 
-//---------------------------------------------------------------------------
-/*
-    Sistema de gastos familiar
-        Crie um objeto que possuirá 2 propriedades, ambas do tipo array:
-            - receitas []
-            - despesas []
-        Agora, crie uma função que irá calcular o total de receitas e despesas e irá mostrar uma mensagem se a familia está com saldo positivo ou negativo, seguido do valor do saldo
-            
-*/
+        const total = saldoReceitas - saldoDespesas
 
+        if(total >= 0){
+            console.log("Saldo Positivo:" + total.toFixed(2)+" R$")
+        }else{
+            console.log("Saldo Negativo: " + total.toFixed(2)+" R$")
+        }
+    }
+    saldo()
 //---------------------------------------------------------------------------
 
 /*
@@ -71,6 +86,38 @@
         F = C * 9/5 + 32
             
 */
+    function grau(valor){
+        const verificaCelsius = valor.toUpperCase().includes("C")
+        const verificaFahrenheit = valor.toUpperCase().includes("F"); 
+
+        //fluxo de erro
+        if(!verificaCelsius && !verificaFahrenheit){
+            throw new Error('Grau não identificado')
+        }
+    
+        //fluxo ideal F -> C
+        let valorAtualizado = Number(valor.toUpperCase().replace("F", ""));
+        let formula = (fahrenheit) => (fahrenheit - 32) * 5/9 //formula do fahrenheit para celsius
+        let grau = "°C"
+
+        //fluxo alternativo C -> F
+        if(verificaCelsius){
+        valorAtualizado = Number(valor.toUpperCase().replace("C", ""));
+        formula = celsius =>  celsius * 9/5 + 32 //formula do celsius para fahrenheit 
+        grau ="°F"
+        }
+
+        return formula(valorAtualizado) + grau
+    }
+
+    try{
+        console.log(grau("86f"))
+        console.log(grau("30c"))
+        console.log(grau("30z"))
+    } catch(error){
+        console.log(error.message)
+    }
+
 
 //---------------------------------------------------------------------------
 /*
@@ -81,13 +128,76 @@
             - mostrar livros do autore Augusto Cury
             - transformar a função acima em uma função que irá receber o nome do autor e devolver os livros desse autor.
 */
-const booksByCategory = [
-    {
-        category:'Riqueza',
-        books:[],
-    },
-    {
-        category:'Inteligência Emocional',
-        books:[],
-    },
-]
+    const booksByCategory = [
+        {
+            category:'Riqueza',
+            books:[
+                {
+                    title: "Os segredos da mente milionária",
+                    author: "T. Harv Eker",
+                },
+                {
+                    title: "O homem mais rico da Babilônia",
+                    author: "George S. Clason",
+                },
+                {
+                    title: "Pai rico, pai pobre",
+                    author: "Robert T. Kiyosaki e Sharon L. Lechter",
+                },
+
+            ],
+        },
+        {
+            category:'Inteligência Emocional',
+            books:[
+                {
+                    title: "Você é Insubstituível",
+                    author: "Augusto Cury",
+                },
+                {
+                    title: "Ansiedade - Como enfrentar o mal do século",
+                    author: "Augusto Cury",
+                },
+                {
+                    title: "Os 7 hábitos das pessoas altamente eficazes",
+                    author: "Stephen R. Covey",
+                },
+            ],
+        },
+    ];
+
+    const totalCategories = booksByCategory.length
+    console.log('Total de Categorias:' + totalCategories)
+
+    for(let category of booksByCategory){
+        console.log('Total de livros da Categoria:', category.category + ': '+ category.books.length)
+    }
+
+    function countAuthor(){
+        let authors = [];
+        
+        for(let category of booksByCategory){
+            for(let book of category.books){
+                if(authors.indexOf(book.author) == -1){
+                    authors.push(book.author)
+                }
+            }
+        }
+        console.log("Total de autores:", authors.length) 
+    }
+    countAuthor()
+
+    function booksOfAuthor(author){
+        let books = [];
+        
+        for(let category of booksByCategory){
+            for(let book of category.books){
+                if(book.author === author){
+                    books.push(book.title)
+                }
+            }
+        }
+        console.log(`Livros do ${author}: ${books.join(", ")}`) 
+    }
+    booksOfAuthor("Augusto Cury")
+    booksOfAuthor("George S. Clason")
