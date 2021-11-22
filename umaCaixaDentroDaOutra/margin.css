@@ -1,0 +1,28 @@
+/*espaço entre os elementos / estilo block
+    -margin-top | margin-right | margin-bottom | margin-left | 
+    -values: <length> | <percentage> | auto |
+
+  css
+    div{
+        //shorthand
+        margin: 12px 16px 10px 4px;
+        margin: 12px 16px 0;
+        margin: 8px 16px;
+        margin 8px;
+    }
+
+    CUIDADO COM MARGIN COLLAPSING (TOP SE AJUNTA COM BOTTOM)
+*/
+h1,
+h2 {
+  border: 1px solid rgb(202, 185, 185);
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+h1 {
+  margin-bottom: 8px; /*margin collapsin --> não soma pega o maior quando um elemento está block(abaixo um do outro)*/
+}
+h1 {
+  margin-top: 8px;
+}
