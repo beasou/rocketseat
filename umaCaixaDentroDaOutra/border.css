@@ -1,0 +1,39 @@
+/*
+    As bordas da caixa 
+
+    -value: <border-style> | <border-width> | <border-color>
+        -style:solid | dotted | dashed | double | groove | ridge | inset | outset
+        -width: <length>
+        -color: <color>
+
+CSS
+    div{
+        //shorthand
+        border-top: solid 2px; // top, rigth, bottom, left;
+
+        //style 
+        border: solid;
+
+        //width <length > | style 
+        border: 2px dotted;
+
+        //style | color
+        border: outset #ccc;
+
+        //width | style | color
+        border: medium dashed green;
+    }
+*/
+
+h4 {
+  width: 100px;
+  height: 100px;
+  margin: 5% auto;
+
+  border: 10px rgb(214, 179, 179) solid;
+  box-sizing: border-box; /*(lado de dentro da caixa)vai procurar o tamanho para não somar e deixar uma caixa grande*/
+  border-top: dotted rgb(214, 179, 179) 5px;
+  border-bottom: dashed rgb(214, 179, 179) 5px;
+  border-left: groove rgb(214, 179, 179) 5px;
+  border-right: double rgb(214, 179, 179) 5px;
+}
