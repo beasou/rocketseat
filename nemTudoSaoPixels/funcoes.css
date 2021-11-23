@@ -1,0 +1,20 @@
+/*
+    em programação, funções são reconhecidas por causar um reaproveitamento de código.
+    
+    * rgb()
+    * hsl()
+    * url()
+    * calc()
+*/
+body {
+  height: 100vh;
+  width: 100vw;
+}
+.image {
+  /*height: calc(100% + 300px);*/
+  width: 400px;
+  height: 300px;
+  background-image: url(http://source.unsplash.com/random);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
