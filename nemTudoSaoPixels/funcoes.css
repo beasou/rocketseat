@@ -11,9 +11,9 @@ body {
   width: 100vw;
 }
 .image {
-  /*height: calc(100% + 300px);*/
+  /*height: calc(50% + 40px);*/
   width: 400px;
-  height: 300px;
+  height: 400px;
   background-image: url(http://source.unsplash.com/random);
   background-repeat: no-repeat;
   background-position: bottom;
