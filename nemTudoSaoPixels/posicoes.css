@@ -1,0 +1,16 @@
+/*
+    <position>
+    Representa um conjunto de coordenadas 2D:
+    - top, right, bottom, left, center
+
+    *usado para alguns tipos de propriedades
+    *não confundir com a propriedade 'position'
+*/
+
+.box {
+  height: 300px;
+  width: 400px;
+  background-image: url(http://source.unsplash.com/random);
+  background-repeat: no-repeat;
+  background-position: center 50px;
+}
