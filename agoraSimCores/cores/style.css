@@ -1,0 +1,90 @@
+/*
+introdução
+    usamos css para alterar cores do nosso documento
+
+    TIPOS
+    -background-color (para caixas)
+    -color(para textos)
+    -border-color (para caixas)
+    -outros...
+
+    VALORES
+    -podemos definir os valores por
+    -palavra-chave (blue, transparent)
+    -hexadecimal(#000111)
+    -funções: rgb, rgba, hsl, hsla
+*/
+
+element {
+  /*Keyword values*/
+  color: currentcolor;
+
+  /*<named-color> values */
+  color: red;
+  color: orange;
+  color: tan;
+  color: rebeccapurple;
+
+  /*<hex-color> values 0-F*/
+  color: #090; /*red green blue*/
+  color: #009900;
+  color: #090a;
+  color: #009900aa;
+
+  /*<rgb()> values*/
+  color: rgb(34, 12, 64, 0.6); /*0-255*/
+  color: rgba(34, 12, 64, 0.6);
+  color: rgb(34 12 64 / 0.6);
+  color: rgba(34 12 64 / 0.3);
+  color: rgb(34 12 64 / 60%);
+  color: rgba(34.6 12 64 / 30%);
+
+  /*<hsl()> values*/
+  color: hsl(30, 100%, 50%, 0.6); /*hue - saturation - luminance*/
+  color: hsla(30, 100%, 50%, 0.6);
+  color: hsl(30 100% 50% / 0.6);
+  color: hsla(30 100% 50% / 0.6);
+  color: hsl(30 100% 50% / 60%);
+  color: hsla(30 100% 50% / 60%);
+
+  /*global values*/
+  color: inherit;
+  color: initial;
+  color: unset;
+}
+
+/*--------------------------------------------exemplos*/
+* {
+  font-size: 20px;
+}
+.colors {
+  /*<named-color> values */
+  color: blue;
+}
+h1 {
+  /*Keyword values*/
+  color: currentcolor; /*pegou a cor do momento da div*/
+}
+
+p {
+  /*<hex-color> values 0-F*/
+  color: #f0099988;
+}
+
+h2 {
+  /*<rgb()> values*/
+  color: rgba(34, 12, 64, 0.6); /*0.6 = alfa que deixa diferente*/
+}
+
+h3 {
+  color: hsl(
+    180,
+    100%,
+    30%,
+    20%
+  ); /*hue - saturation - luminance - transparence*/
+}
+
+h4 {
+  color: initial;
+}
