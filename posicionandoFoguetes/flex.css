@@ -1,0 +1,39 @@
+/*
+    flexbox
+    -nos permite posicionar os elementos dentro da caixa.
+    -controle em uma dimensão(horizontal ou vertical)
+    -Alinhamento, direcionamento, ordenar e tamanhos
+
+    CSS
+
+    div.parent{
+        display:flex;
+    }
+
+    flex-direction
+    -qual a direção do flex: horizontal ou vertical
+    -row | colum
+
+    alinhamento
+    -justfy-content
+    -align-items
+
+*/
+.container {
+  display: flex;
+  justify-content: center;
+}
+.box {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+}
+.blue {
+  background-color: rgb(31, 23, 151);
+}
+.red {
+  background-color: rgb(163, 42, 42);
+}
+.green {
+  background-color: rgb(55, 133, 45);
+}
