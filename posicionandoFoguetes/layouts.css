@@ -16,3 +16,45 @@
     -name: position
     -value:static | relative | absolute | fixed
 */
+.box {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+}
+.box1 {
+  background-color: rgb(132, 0, 255);
+}
+.box2 {
+  background-color: rgb(195, 0, 255);
+}
+.box3 {
+  background-color: rgb(255, 0, 200);
+}
+
+/*static --> por padrão sempre um abaixo do outro ocupando uma linha, a não ser que seja inline*/
+
+/*relative --> ao utilizar, adquirimos 5 propriedades: top, right, bottom, left, z-index
+mantem o fluxo natural, para a posição onde ele está e dos demais, mas eu posso alterado utilizando top, right, bottom, left, z-index */
+
+/*
+.box1 {
+  position: relative; 
+  left: 100px;
+  top: 80px;
+}/*
+
+/*absolute --> é como se fosse eliminado o espaço dele e tivessemos uma nova camada acima, então os outros elementos se movem, para um novo fluxo*/
+
+/*
+.box2 {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+} /*
+
+/*fixed  os elementos vão estar atras, poisa ele esta fixo, a ideia é deixa-lo fixo na página*/
+
+/*
+.box1 {
+  position: fixed;
+}*/
