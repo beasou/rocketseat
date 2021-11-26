@@ -14,12 +14,16 @@
     "main aside"
     "footer footer";
   grid-template-rows: 40px 1fr 40px; /*tamanho das linhas*/
-  grid-template-columns: 1fr 80px; /*tamanho das colunas*/
+  grid-template-columns: 1fr 90px; /*tamanho das colunas*/
 }
 
 header {
   grid-area: header; /*de acordo com o definido acima*/
   background-color: brown;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
 }
 main {
   grid-area: main;
