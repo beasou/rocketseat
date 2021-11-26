@@ -1,0 +1,35 @@
+/*
+    -Posicionamento dos elementos dentro da caixa
+    -posicionamento hprizontal e vertical ao mesmo tempo
+    -pode ser flexivel ou fixo
+    -cria espaços para elementos filhos habitarem
+*/
+
+.grid {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header" /*colunas 1 e 2*/
+    "main aside"
+    "footer footer";
+  grid-template-rows: 40px 1fr 40px; /*tamanho das linhas*/
+  grid-template-columns: 1fr 80px; /*tamanho das colunas*/
+}
+
+header {
+  grid-area: header; /*de acordo com o definido acima*/
+  background-color: brown;
+}
+main {
+  grid-area: main;
+  background-color: burlywood;
+}
+aside {
+  grid-area: aside;
+  background-color: cadetblue;
+}
+footer {
+  grid-area: footer;
+  background-color: darkcyan;
+}
