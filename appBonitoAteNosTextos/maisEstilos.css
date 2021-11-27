@@ -1,0 +1,120 @@
+/*
+    font-variant
+    -variações na apresentação fonte
+
+    CSS
+    p{
+        font-variant: small-caps;
+    }
+*/
+p {
+  font-variant: small-caps;
+}
+
+/*
+    font-stretch
+    -alargamento ou encolhimento da fonte
+    -aceita palavra-chaves como: expanded, condensed, normal
+    -aceita porcentagem de 50% a 200%
+    CSS
+    p{
+        font-stretch: expanded;
+    }
+*/
+p {
+  font-stretch: condensed;
+}
+
+/*
+    letter-spacing
+    -espaço entre caracteres
+    CSS
+    p{
+        letter-spacing:4px;
+    }
+*/
+p {
+  letter-spacing: 4px;
+}
+
+/*
+    word-spacing
+    -espaco entre caracteres
+    CSS
+    p{
+        word-spacing: 4px;
+    }
+*/
+p {
+  word-spacing: 14px;
+}
+
+/*
+    line-height
+    -espaço entre linhas
+    -pode ser com unidades ou sem unidades de medida 
+    -comun: 1.5 ou 2
+    CSS
+    p{
+        line-height:1.6;
+    }
+*/
+p {
+  line-height: 1.6;
+}
+
+/*
+    text-transform
+    -transformação do texto
+    CSS
+    p{
+        text-transform: uppcase; capitalize | lowercase | none
+    }
+*/
+p {
+  text-transform: uppcase;
+}
+
+/*  
+    text-decoration
+    -aprecia decorativa de um texto
+    -line: underline | overline | line-through
+        podemos aplicar m,ais de 1 valor
+    -style: wavy| dotted | double | dashed | solid
+    -color: <color> values
+
+    CSS
+    p{
+        text-decoration: underline;
+    }
+*/
+p {
+  text-decoration: underline blue dotted;
+}
+
+/*
+    text-align
+    -alinhamento de um texto
+    CSS
+    p{
+        text-align: center; letf |right | center | justify
+    }
+*/
+p {
+  text-align: center;
+}
+
+/*
+    text-shadow
+    -sombra aplicada a um texto
+    -permite multiplos valores
+
+    CSS
+    p{
+        text-shadow: 1px 1px 1px red,
+                     2px 2px 1px green; offset-x | offset-y | blur-radius | color
+    }
+*/
+p {
+  text-shadow: 1px 1px 3px rgb(30, 255, 0), 2px 2px 1px rgb(128, 126, 0);
+}
