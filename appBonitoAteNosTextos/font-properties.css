@@ -20,4 +20,12 @@
     p{
         font-family:"Times new Roman", times, serif;
     }
+
+    -serif
+    -sans
 */
+
+/*FONT FAMILY*/
+p {
+  font-family: "Times New Roman", times, sans-serif;
+}
