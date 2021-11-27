@@ -15,17 +15,48 @@
     -tipo de fontes de um elemento
     -lista de fontes e ordem de prioridade
     -inclui *fallback* font
-    
     CSS
     p{
         font-family:"Times new Roman", times, serif;
     }
-
     -serif
     -sans
+------------------------------------------------------------
+    FONT WEIGHT
+    -peso da fonte
+    CSS
+    p{
+        font-weight:bold;
+    }
+------------------------------------------------------------
+    FONT STYLE
+    -o estilo da fonte
+    CSS
+    p{
+        font-style:italic;
+    }
+------------------------------------------------------------
+    FONT SIZE
+    -o tamanho da fonte
+    CSS
+    p{
+        font-size:18px;
+    }
+------------------------------------------------------------
+
+    WEB FONTS
+    -fontes do sistema x fontes da web
+    -como usar fontes para web?
+        @font-face
+        @import
+        link
 */
 
 /*FONT FAMILY*/
 p {
   font-family: "Times New Roman", times, sans-serif;
+  font-weight: bold; /*FONT WEIGHT-peso*/
+  font-style: italic;
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
 }
