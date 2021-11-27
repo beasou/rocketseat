@@ -1,0 +1,23 @@
+/*
+    TRABALHANDO COM FONTES
+    tipografia transmite mensagem 
+    -negrito
+    -tamanho
+    -estilo
+
+    BASIC FONT PROPERTIES
+    -font-family
+    -font-weight
+    -font-style
+    -font-size
+
+    FONT FAMILY
+    -tipo de fontes de um elemento
+    -lista de fontes e ordem de prioridade
+    -inclui *fallback* font
+    
+    CSS
+    p{
+        font-family:"Times new Roman", times, serif;
+    }
+*/
