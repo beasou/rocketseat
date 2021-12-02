@@ -16,13 +16,37 @@
         -action
         -method
   -->
-  <form action="" method="get"><!--action vazio, entende que é para a mesma página-->
+  <form id ="contato"action="" method="get"><!--action vazio, entende que é para a mesma página-->
     <!--"get" os dados aparecerão na url, exemplo dado de pesquisa e recebidos na url que for definida em action-->
     <!--"post" os dados ficarão escondidos, serve para "criar algo" e recebidos na url que for definida em action -->
     <!--NÃO PODEMOS CRIAR UM FORM DENTRO DE OUTRO-->
-    <fieldset>
-        <legend>Formulário</legend>
-        <label for="">Nome</label>
+    <button>Enviar</button>
+  
+
+    <fieldset form="contato" name="inputs-contact"> <!--ja faz a linha/ se disable, td que estiver aqui dentro será desabilitado-->
+      <!--
+        <fieldset>
+          -agrupamento de campos
+          -mesmo proposito
+          -semântico
+          -acessibilidade
+
+        atributos especiais 
+          -disable
+            -desabilita todos os elementos internos 
+            -não serão enviados ao submeter o formulario
+          -form
+            -o id de um formulario ao qual esse fieldser pertence 
+            não precisa estar dentro do formulario
+          -name
+            -nome do grupo
+
+        <legend>
+          -nome do agrupamento
+          -primeiro elemento dentro do fieldset
+      -->
+        <legend>Formulário</legend> <!--legenda do formulário-->
+        <label for="">Nome</label> <!--caixa de entrada-->
         <input type="text">
     </fieldset>
   </form>
