@@ -77,7 +77,56 @@
           -form
         -->
     </fieldset>
-    
+     <!--
+       #<detalist>
+         -lista de valores como sugestão a uma tag <input>
+         -valores sugestivos e não obrigatórios 
+         -usuário poderão selecionar um dos valores, ou colocar um valor diferente de sugestão
+
+         <datalist id="fruitsdata">
+           <option>apple</option>
+           <option>banana</option>
+           <option>mango</option>
+           <option>orange</option>
+           <option>cherry</option>
+         </datalist>
+
+       #<list>
+         -recebe como valor o id de um <datalist> residente no mesmo documento.
+
+       #tipos de input suportados
+         -text, search, url, tel, email, date, month, week, time,
+         datetime-local, number, range e color.
+         
+         *valores de datalist que não são compativeis com o tipo do <input> não serão apresentados.
+
+       #tipos de input não suportados (conforme especificação)
+         -hidden, password, checkbox, radio, file, ou qualquer tipo de button
+
+       #user agent
+          verificar a compatibilidade com o browser https://caniuse.com
+     -->
+     <input type="text" list="fruitsdata" placeholder="Escolha uma fruta"/>
+     <datalist id="fruitsdata">
+      <option>maça</option>
+      <option>banana</option>
+      <option>manga</option>
+      <option>laranja</option>
+      <option>cereja</option>
+    </datalist>
+    <input type="color" list="colorsdata" placeholder="Escolha uma cor"/>
+    <datalist id="colorsdata">
+      <option>#00FFFF</option>
+      <option>#00CED1</option>
+      <option>#40E0D0</option>
+      <option>#48D1CC</option>
+      <option>#20B2AA</option>
+      <option>#008B8B</option>
+      <option>#008080</option>
+      <option>#7FFFD4</option>
+      <option>#66CDAA</option>
+      <option>#5F9EA0</option>
+    </datalist>
   </form>
 </body>
 </html>
