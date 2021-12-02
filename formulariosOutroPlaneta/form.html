@@ -20,8 +20,6 @@
     <!--"get" os dados aparecerão na url, exemplo dado de pesquisa e recebidos na url que for definida em action-->
     <!--"post" os dados ficarão escondidos, serve para "criar algo" e recebidos na url que for definida em action -->
     <!--NÃO PODEMOS CRIAR UM FORM DENTRO DE OUTRO-->
-    <button>Enviar</button>
-  
 
     <fieldset form="contato" name="inputs-contact"> <!--ja faz a linha/ se disable, td que estiver aqui dentro será desabilitado-->
       <!--
@@ -60,7 +58,26 @@
                 -button, input(not hidden), meter, output, progress, select, textarea
         -->
         <input id="nome" type="text">
+        <button type="submit" name="button" autofocus>Enviar</button>
+        <!--
+          <button>
+            -representa um botão
+            -usado para enviar formulários
+            -é estilizado pelo user agent
+
+          Atributos comuns
+          -type
+            -submit
+            -reset
+            -button
+          -autofocus
+          -disable
+          -name
+          -value
+          -form
+        -->
     </fieldset>
+    
   </form>
 </body>
 </html>
