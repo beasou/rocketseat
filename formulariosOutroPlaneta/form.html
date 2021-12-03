@@ -151,11 +151,14 @@
       -requided(obrigatótio)(quase todos)
       -placeholder(password, search, tel,text,url)(quase todos)
     -->
-    <hr> INPUT <br>
-    <input type="date">
+    <hr> Tipos de INPUT <br>
+    Data: 
+    <input type="date"><br>
+    File: 
     <input type="file">
-
+    <br>
     <!--SENHA-->
+    Senha:
     <input type="password" 
     minlength="4" 
     maxlength="8"
@@ -165,7 +168,7 @@
     placeholder="Digite sua senha"
     required
     inputmode="numeric"
-    autocomplete="off">
+    autocomplete="off"><br>
 
     <!--
       <input type="password">
@@ -224,6 +227,7 @@
             *<datalist> irá conter uma lista de valores pré definidos a fim de sugerir ao usuário, quais valores estão disponíveis
               *Os valores do <datalist> que não forem compatíveis com o campo, não serão apresentados como sugestão 
     -->
+    E-mail:
     <input type="email"
      placeholder="Digite um e-mail"
      value="beasou@bea.com.br"
@@ -232,7 +236,37 @@
 
     <datalist id="emailslist">
       <option >bea@bea.com.br</option>
-    </datalist>
+    </datalist><br>
+
+    <!--
+      <input type="url"/>
+
+        -espera que o usuário digite uma url
+        -irá validar se o valor digitado é uma url
+      #Atributos
+          -placeholder
+          -readonly/disable
+          -value
+          -required
+          -minlength /maxlength
+            *o minimo e/ou máximo valor que o campo irá conter
+          -size
+            *valor numérico indicando quantos caracteres esse campo deveria conter, modificando o tamanho do campo para o usuário
+          -pattern
+            *uso de expressão regular para validar o campo 
+            *ex: o usuário só poderá colocar domínio.com.br
+              *pattern=".*\.com\.br\/.*"
+          -list
+          -spellcheck
+            *habilitar a verificação ortográfica para este input
+    -->
+    URL:
+    <input type="url"
+    placeholder="http://example.com"
+    pattern=".*\.com\.br\/.*"
+    title="somente dominio .com.br serão aceitos"
+    spellcheck="false"
+    /><br>
   </form>
 </body>
 </html>
