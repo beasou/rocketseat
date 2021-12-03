@@ -76,7 +76,8 @@
           -value
           -form
         -->
-    </fieldset>
+    </fieldset><hr>
+    <h3> Tipos de INPUT</h3> 
      <!--
        #<detalist>
          -lista de valores como sugestão a uma tag <input>
@@ -106,6 +107,7 @@
        #user agent
           verificar a compatibilidade com o browser https://caniuse.com
      -->
+     Lista:
      <input type="text" list="fruitsdata" placeholder="Escolha uma fruta"/>
      <datalist id="fruitsdata">
       <option>maça</option>
@@ -113,8 +115,24 @@
       <option>manga</option>
       <option>laranja</option>
       <option>cereja</option>
-    </datalist>
+    </datalist> 
+    <br>
     
+    <!--
+      <input type="color"/>
+        -interface para selecionar cor
+        -color picker
+      #Atributos
+        -value:RGB
+          -se invalido, o preto será exibido
+        -list
+          *o id de uma tag <datalist> que está no mesmo documento
+            *<datalist> irá conter uma lista de valores pré definidos a fim de sugerir ao usuário, quais valoresestão disponíveis
+            *Os valores do <datalist> que não forem compatíveis com o campo, não serão apresentados como sugestão 
+    -->
+    Cor:
+    <input type="color" value="#ff0000">
+    <input type="color" list="colorsdata" placeholder="Escolha uma cor"/>
     <datalist id="colorsdata">
       <option>#00FFFF</option>
       <option>#00CED1</option>
@@ -126,8 +144,7 @@
       <option>#7FFFD4</option>
       <option>#66CDAA</option>
       <option>#5F9EA0</option>
-    </datalist>
-    <input type="color" list="colorsdata" placeholder="Escolha uma cor"/>
+    </datalist><br>
     <!--
       <input>
       -um dos mauis usados em formulários
@@ -151,7 +168,7 @@
       -requided(obrigatótio)(quase todos)
       -placeholder(password, search, tel,text,url)(quase todos)
     -->
-    <hr> Tipos de INPUT <br>
+    
     Data: 
     <input type="date"><br>
    
