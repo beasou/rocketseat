@@ -154,9 +154,7 @@
     <hr> Tipos de INPUT <br>
     Data: 
     <input type="date"><br>
-    File: 
-    <input type="file">
-    <br>
+   
     <!--SENHA-->
     Senha:
     <input type="password" 
@@ -268,6 +266,30 @@
     spellcheck="false"
     /><br>
   </form>
+      <!--
+       <input type="file"/>
+       -usuário poderá escolher 1 ou mais arquivos para enviar no formulário
+
+       #Atributos
+          -value
+            contem o arquivo a ser enviado
+          -accept
+            -descreve que tipos de arquivos serão aceitos
+            -ex: .doc, .docx, .pdf, .audio/*, image/png, .png
+          -files
+            -a lista de arquivos ou arquivo 
+          -multiple
+            -permite o envio de múltiplos arquivos
+       #Envio dos arquivos
+          para envio dos arquivos o formulário deverá utilizar o método POST e o atributo enctype como "multipart/form-data"
+    -->
+    File: 
+    <form action="" method="post" enctype="multipart/form-data"> 
+    <input type="file" 
+           accept=".doc" 
+           multiple/>
+    <br>
+   </form>
 </body>
 </html>
 
