@@ -321,6 +321,34 @@
         <label for="music">Music</label>
       </div>
     </fieldset>
+
+    <!-- 
+      <input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+        -invisivel ao usuario
+        -será enviado com o formulário 
+        -não receberá foco
+        -leitores de tela não percebem esse tempo
+    -->
+    <input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+
+    <!--
+      <input type="radio">
+      -projetado para selecionar uma unica opção de um grupo de opções
+
+      ATRIBUTOS ESSENCIAIS 
+      -cheked
+        indica que o campo foi marcado 
+      -value
+        valor que aquele campo contém
+    -->
+    <fieldset>
+      <legend>bora tomar um cafe</legend>
+      <label for="yep">SIM</label>
+      <input type="radio" id="yep" name="coffees" value="yes">
+
+      <label for="nop">NÃO</label>
+      <input type="radio" id="nop" name="coffees" value="nop">
+    </fieldset>
       <!--
        <input type="file"/>
        -usuário poderá escolher 1 ou mais arquivos para enviar no formulário
