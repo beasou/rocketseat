@@ -298,10 +298,29 @@
 
           se eu marcar vai como sbscribe= on se não marcar vai vazio
     -->
+
     <label for="subscribe">Receber notificações</label>
     <input type="checkbox" name="subscribe" 
-    id="subscribe" checket>
+    id="subscribe" checked>
   </form>
+
+      <!--
+      MARCAR MÚLTIPOS VALORES?
+        -Usaremos o atributo 'name' com o mesmo nome para os diversos campos
+    -->
+    <fieldset>
+      <legend>escolha seu interesse</legend>
+      <div>
+        <input type="checkbox" id="coding" name="interesse"
+        value="coding" checked>
+        <label for="coding">Coding</label>
+      </div>
+      <div>
+        <input type="checkbox" id="music" name="interesse"
+        value="music" >
+        <label for="music">Music</label>
+      </div>
+    </fieldset>
       <!--
        <input type="file"/>
        -usuário poderá escolher 1 ou mais arquivos para enviar no formulário
