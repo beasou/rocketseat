@@ -24,3 +24,31 @@
 
     ATENÇÃO: O formulário deverá conter regras de acessibilidade, como o label para cada campo, por exemplo.
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Form</title>
+</head>
+<body>
+    <form action="">
+        <fieldset form="contato" name="inputs-contact">
+            <legend>Contato</legend>
+                <label for="nome" >Nome:</label>
+                    <input id="nome" type="text" placeholder="Digite seu nome" >
+
+                <br><br>
+                <label for="email">E-mail:</label>
+                    <input type="email" placeholder="Digite um e-mail" />
+
+                <br><br>
+                <label for="message">Mensagem:</label>
+                    <textarea wrap="soft" id="message" name="message" cols="20" rows="3" placeholder="Deixe sua mensagem" requided></textarea>
+            <br>
+            <button type="submit" name="button" autofocus>Enviar</button>
+        </fieldset>
+    </form>
+</body>
+</html>
