@@ -302,7 +302,7 @@
     <label for="subscribe">Receber notificações</label>
     <input type="checkbox" name="subscribe" 
     id="subscribe" checked>
-  </form>
+  
 
       <!--
       MARCAR MÚLTIPOS VALORES?
@@ -365,10 +365,36 @@
     -->
     <label for="message">Mensagem</label>
     <textarea wrap="soft" id="message" name="message" cols="30" rows="3"></textarea>
-
 <br>
+<!--
+  <select>
+    -controle que fornece um menu de opções
+    
+    <option>
+      -contém as opções a serem selecionadas
+      -atributos necessários
+        -value
+    
+    ATRIBUTOS ÚNICOS 
+      -multiple
+        Habilita múltiplas opções
+      -size
+        quando opções visiveis?
+-->
+  <label for="carselect">Qual modelo do carro?</label>
+    <select name="carmodels" id="carselect" multiple size="2">
+      <option value="bmw">x6</option>
+      <option value="fiat">uno</option>
+      <option value="audi">A3</option>
 
-      <!--
+    </select>
+
+
+
+</form>      
+
+
+<!--
        <input type="file"/>
        -usuário poderá escolher 1 ou mais arquivos para enviar no formulário
 
