@@ -1,0 +1,20 @@
+/*
+    COMBINATORS
+        Combinadores, pois eles trabalham para buscar e combinar seletores a f
+        
+    DESCENDANT COMBINATOR
+        -identificado por um espaço entre os seletores
+        -busca um elemento dentro de outro
+
+    css
+    body article h2
+
+    CHILD COMBINATOR
+        -identificado pelo sianl > entre dois seletores
+        -seleciona somente o elemento que é filho direto do pai
+        -elementos depois do filho direto serão desconsiderados
+*/
+
+body article h2{
+    color:green;
+}
