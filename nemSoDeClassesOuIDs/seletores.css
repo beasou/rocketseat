@@ -1,0 +1,64 @@
+/*
+    SELETORES
+        Conecta um elemento HTML com o CSS a fim de alterar o elemento.
+    
+    TIPOS
+        -Element selector
+            -todos os elementos html
+        -ID selector 
+            -um elemento que tenha um atributo `id`.
+            -cada id deverá ser único.
+        -class selector
+            -os elementos que contenha um atributo `class`.
+            -podemos ter uma ou mais classes.
+        -attribute selector
+            -um elemento que tenha um atributo especifico.
+        -pseudo-class selector
+            -elementos em um estado especifico.
+    MULTIPLOS
+        voce poderá selecionar multiplos elementos e aplicar alguma regra css PARA TODOS ELES.
+
+        usamos uma separação por virgula para isso.
+    
+        css
+    h1, p, a{
+        color:red;
+    }
+*/
+
+/* SELETOR DE ELEMENTO*/
+h1{
+    color:aqua;
+    font-size: 30px;
+}
+p{
+    color:chocolate;
+}
+
+/* ID SELECTOR*/
+#title{
+    color: crimson;
+    font-size: 30px;
+}
+#content{
+    color: cornflowerblue;
+}
+
+/*CLASS SELECTOR*/
+.red{
+    color: red;
+}
+
+.big{
+    font-size: 3em;
+}
+
+/* SELETOR DE ATRIBUTO*/
+[title]{
+    color: orange;
+}
+
+/*PSEUDO-CLASSE*/
+h1:hover, p:hover{
+    color: rgb(92, 225, 65);
+}
