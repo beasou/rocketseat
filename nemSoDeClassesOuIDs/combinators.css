@@ -29,6 +29,14 @@
         -seleciona todos os elementos irmãos
     css
     h1 ~ p
+
+    UTILIZANDO COMBINATORS
+
+    ul > li[class="red"]
+
+    DICA
+        -seletores muito especificos tendem a causar dificuldades no reuso das regras de estilização dos elementos
+        -muitas vezes, um simples uso de classes, torna o trabalho mais eficiente.
 */
 
 
@@ -52,4 +60,9 @@ button + button{
 /*GENERAL SIBLING COMBINATOR*/
 input ~ input{
     background-color: yellowgreen;
+}
+
+/*UTILIZANDO COMBINATORS pegando tds elementos q tenham a classe blue*/
+ul > li[class="blue"]{
+    color: blue;
 }
