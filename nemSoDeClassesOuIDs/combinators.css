@@ -20,6 +20,9 @@
     ADJACENT SIBLING COMBINATOR
         -identificado pelo sinal + entre dois seletores
         seleciona somente o elemento ao lado que é irmão direto na hierarquia 
+    
+    css    
+    h1 + p
 */
 
 
@@ -32,4 +35,10 @@ body article h2{
 /* CHILD COMBINATOR*/
 body > ul > li{
     color: yellow;
+}
+
+/*ADJACENT SIBLING COMBINATOR*/
+button + button{
+    color: violet;
+    margin-left: 30px;
 }
