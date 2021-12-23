@@ -13,8 +13,23 @@
         -identificado pelo sianl > entre dois seletores
         -seleciona somente o elemento que é filho direto do pai
         -elementos depois do filho direto serão desconsiderados
+
+    css
+    body > ul > li
+
+    ADJACENT SIBLING COMBINATOR
+        -identificado pelo sinal + entre dois seletores
+        seleciona somente o elemento ao lado que é irmão direto na hierarquia 
 */
 
+
+/* DESCENDANT COMBINATOR*/
 body article h2{
     color:green;
+}
+
+
+/* CHILD COMBINATOR*/
+body > ul > li{
+    color: yellow;
 }
