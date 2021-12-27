@@ -36,3 +36,12 @@ ul li:first-child {
     font-size:18px;
     color: chocolate;
 }
+
+/*nth-child odd e even*/
+ol li:nth-child(odd){ /*odd numeros impares, even numeros pares- ficando 1 selecionado e 1 não*/
+    color:darkorange;
+    
+}
+ol li:nth-child(even){
+    background:darkseagreen;
+}
