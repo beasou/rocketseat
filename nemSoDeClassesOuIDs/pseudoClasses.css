@@ -17,3 +17,9 @@
     AÇõES DO USUÁRIO
     
 */
+
+/*FIRST-CHILD*/
+ul li:first-child {
+    font-weight: bold;
+    color:brown;
+}
