@@ -25,7 +25,14 @@ ul li:first-child {
 }
 
 /*NTH-OF-TYPE*/
-article p:nth-of-type(2) {/*pega o elemento que eu indicar entre ()*/
+#exemplo p:nth-of-type(2) {/*pega o elemento que eu indicar entre ()*/
     font-weight: bold;
     font-size: 15px;
+}
+
+/*NTH-CHILD*/
+#article p:nth-child(2){/*conta os filhos de article*/
+    font-weight: bold;
+    font-size:18px;
+    color: chocolate;
 }
