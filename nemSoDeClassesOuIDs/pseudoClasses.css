@@ -1,0 +1,19 @@
+/*
+    PSEUDO-CLASSES
+    é um tipo de seletor que irá selecionar um elemento que estiver em um
+    estado especifico.
+
+    exemplo: é o primeiro elemento dentro de uma caixa, ou, o elemento esta
+    com o ponteiro do mouse em cima dele.
+
+    pseudo-classes começam com 2 pontos seguido do nome da pseudo class
+    `:pseudo-class-name`
+
+    SELECIONANDO ELEMENTOS COM PSEUDO-CLASSES
+    * :first-child
+    * :nth-of-type()
+    * :nth-child()
+
+    AÇõES DO USUÁRIO
+    
+*/
