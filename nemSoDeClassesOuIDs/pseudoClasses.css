@@ -23,3 +23,9 @@ ul li:first-child {
     font-weight: bold;
     color:brown;
 }
+
+/*NTH-OF-TYPE*/
+article p:nth-of-type(2) {/*pega o elemento que eu indicar entre ()*/
+    font-weight: bold;
+    font-size: 15px;
+}
