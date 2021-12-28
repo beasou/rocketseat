@@ -1,0 +1,29 @@
+/*
+    LAYOUT E EVOLUÇÃO
+    layout tem a ver com a maneira que os elementos estão distribuidos
+    na tela
+
+    NORMAL FLOW
+    Ou Flow layout é a maneira que os elementos `block` e `inline`
+    ficam na página
+
+    ```html
+    <p> texto block com <strong>inline</strong> dentro </p>
+
+    TABLES
+    é a maneira de tabelas onde a tag `table` recebe um display `table`
+    fazendo com que os elementos internos como `td` e `tr` posam
+    ser usados para montar uma tabela
+
+    ```html
+    <table> 
+        <tr>
+            <td>HORA</td>
+            <td>20:00</td>
+        </tr>
+        <tr>
+            <td>HORA</td>
+            <td>20:37</td>
+        </tr>
+    </table>
+*/
