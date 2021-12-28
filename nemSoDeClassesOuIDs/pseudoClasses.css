@@ -64,3 +64,7 @@ input:focus{
     border-color: rgb(130, 42, 165);
     /*outline: none;*/
 }
+/*ATRIBUTOS disabled e required*/
+input:disabled{
+    background-color: rgb(228, 220, 220);
+}
