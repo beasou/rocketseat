@@ -1,0 +1,30 @@
+/*
+    PSEUDO-ELEMENTS
+    com pseudo-elements nós podemos adicionar elementos HTML pelo próprio CSS
+
+    `::pseudo-element-name`
+
+    EXEMPLOS
+    *::before
+    *::after
+    *::first-line
+
+    MOZILLA-REFERENCIA
+
+*/
+li{
+    position:relative;
+}
+
+li::before{
+    content: ">";
+}
+
+li::after{
+    content: " ";/*preciso de content, se não não funciona*/
+    width: 10px;
+    height: 1px;
+    background-color: hotpink;
+    position:absolute;
+    bottom: 0px;
+}
