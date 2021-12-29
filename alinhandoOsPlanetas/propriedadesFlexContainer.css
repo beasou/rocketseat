@@ -16,7 +16,6 @@
     JUSTIFY-CONTENT
     -alinhamento dos elementos dentro do container
     -distribuição dos elementos
-
     VALORES
     -flex-start
     -flex-end
@@ -24,6 +23,14 @@
     -space-around
     -space-between
     -space-evenly
+
+    ALIGN-ITEMS
+    -alinhamento dos elementos no eixo cruzado
+    VALORES
+    -stretch
+    -flex-start
+    -flex-end
+    -center
 
 */
 
@@ -36,12 +43,16 @@
 /*FLEX-WRAP*/
 .box{
     display: flex;
-    flex-wrap: wrap;/*vai permitir criar novas linhas, caso ultrapasse o tamanho*/
+    /*flex-wrap: wrap;*//*vai permitir criar novas linhas, caso ultrapasse o tamanho*/
     /*FLEX-FLOW
     flex-flow: row wrap;
     */
     border: 1px dashed red;
-    justify-content:space-evenly ;/* JUSTIFY-CONTENT*/
+    height: 150px;
+    /* JUSTIFY-CONTENT*/
+    /*justify-content:space-evenly ;*/
+    /* ALIGN-ITEMS*/
+    align-items: flex-end;
 }
 
 .box div{
