@@ -32,6 +32,13 @@
     -flex-end
     -center
 
+    GAP
+    -espaço entre os elementos
+    VALORES
+    unidade de medidas
+    fixas:px, pt
+    flexíveis:%, em, rem
+
 */
 
 /*DIREÇÃO DOS ITENS*/
@@ -48,16 +55,17 @@
     flex-flow: row wrap;
     */
     border: 1px dashed red;
-    height: 150px;
+    /*height: 150px;*/
     /* JUSTIFY-CONTENT*/
     /*justify-content:space-evenly ;*/
     /* ALIGN-ITEMS*/
-    align-items: flex-end;
+    /*align-items: flex-end;*/
+    gap:2rem; /*espaço colocado entre eles*/
 }
 
 .box div{
     border: 1px solid green;
-    width: 100px;
+    /*width: 100px;*/
 }
 
 
