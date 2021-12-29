@@ -65,6 +65,7 @@
 
 /*-----------------------------------------------------------------*/
 /*shorthand na prática */
+/*
 .page{
     border:2px solid;
     min-height:100vh;
@@ -91,4 +92,27 @@ main section:nth-child(2){
 main section:nth-child(3){
     background: lightpink;
     flex: 1 0;
+}
+*/
+
+/*-----------------------------------------------------------------*/
+/*ORDER*/
+.box{
+    display:flex;
+    border: 1px dashed red;
+}
+.box div{
+    border: 1px solid plum;
+}
+.box div:nth-child(1){
+    order:1;
+}
+.box div:nth-child(2){
+    order:20;
+}
+.box div:nth-child(3){
+    order:0;
+}
+.box div:nth-child(4){
+    order:-1;
 }
