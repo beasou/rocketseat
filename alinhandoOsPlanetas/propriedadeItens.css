@@ -1,8 +1,17 @@
 /* 
     PROPRIEDADES PARA OS ITENS
-    -flex-basis
+    -flex-basis - por padrão é auto
     -flex-grow
     -flex-shrink
     -flex
     -order
 */
+
+.box{
+    display:flex;
+    border: 1px dashed red;
+}
+.box div{
+    border: 1px solid plum;
+    flex-basis: 25%;
+}
