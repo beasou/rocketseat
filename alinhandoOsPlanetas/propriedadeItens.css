@@ -49,7 +49,10 @@
 }
 */
 
+/*-----------------------------------------------------------------*/
+
 /*flex (shorthand)*/
+/*
 .box{
     display:flex;
     border: 2px dashed red;
@@ -57,4 +60,35 @@
 .box div{
     border: royalblue solid;
     flex:0 1 40px;
+}
+*/
+
+/*-----------------------------------------------------------------*/
+/*shorthand na prática */
+.page{
+    border:2px solid;
+    min-height:100vh;
+    display: flex;
+}
+aside{
+    background:lightgreen;
+    flex: 1;
+}
+main{
+    background: lightblue;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+main section:nth-child(1){
+    background: lightgoldenrodyellow;
+    flex: 0 0 100px;
+}
+main section:nth-child(2){
+    background: lightsalmon;
+    flex: 0 400px;
+}
+main section:nth-child(3){
+    background: lightpink;
+    flex: 1 0;
 }
