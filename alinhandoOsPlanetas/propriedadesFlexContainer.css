@@ -5,8 +5,14 @@
     -valores:(row | row-reverse | column | column-reverse)
 
     FLEX-WRAP
-    podemos usar multiplas linhas
-    cada nova linha, um novo flex container
+    -podemos usar multiplas linhas
+    -cada nova linha, um novo flex container
+
+    FLEX-FLOW
+    -shorthand
+    -flex-direction || flex-wrap
+    Direção e multi linha em uma única propriedade
+
 */
 
 /*DIREÇÃO DOS ITENS*/
@@ -19,6 +25,9 @@
 .box{
     display: flex;
     flex-wrap: wrap;/*vai permitir criar novas linhas, caso ultrapasse o tamanho*/
+    /*FLEX-FLOW
+    flex-flow: row wrap;
+    */
     border: 1px dashed red;
 }
 
@@ -26,3 +35,5 @@
     border: 1px solid green;
     width: 100px;
 }
+
+
