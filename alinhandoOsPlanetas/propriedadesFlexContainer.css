@@ -1,0 +1,11 @@
+/*
+    DIREÇÃO DOS ITENS
+    -Flex é uma dimensão (horizontal ou vertical)
+    -podemos mudar a direção com `flex-direction`
+    -valores:(row | row-reverse | column | column-reverse)
+*/
+
+.flexcontainer{
+    display: flex;
+    flex-direction: row-reverse;
+}
