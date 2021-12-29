@@ -35,4 +35,15 @@
     <div style="float: left">esquerda</div>
     <div style="float: right">direita</div>
     <div style="clear: both">normal</div>
+
+    FLEXBOX
+    A caixa se torna flex, fazendo com que os elementos internos possam receber melhor:
+    -alinhamento
+    -ordenação
+    -tamanhos flexíveis 
 */
+
+/*flexbox*/
+.flexbox{
+    display:flex;
+}
