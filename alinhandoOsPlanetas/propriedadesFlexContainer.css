@@ -3,9 +3,26 @@
     -Flex é uma dimensão (horizontal ou vertical)
     -podemos mudar a direção com `flex-direction`
     -valores:(row | row-reverse | column | column-reverse)
+
+    FLEX-WRAP
+    podemos usar multiplas linhas
+    cada nova linha, um novo flex container
 */
 
+/*DIREÇÃO DOS ITENS*/
 .flexcontainer{
     display: flex;
     flex-direction: row-reverse;
+}
+
+/*FLEX-WRAP*/
+.box{
+    display: flex;
+    flex-wrap: wrap;/*vai permitir criar novas linhas, caso ultrapasse o tamanho*/
+    border: 1px dashed red;
+}
+
+.box div{
+    border: 1px solid green;
+    width: 100px;
 }
