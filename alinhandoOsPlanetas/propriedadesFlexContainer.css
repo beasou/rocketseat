@@ -13,6 +13,18 @@
     -flex-direction || flex-wrap
     Direção e multi linha em uma única propriedade
 
+    JUSTIFY-CONTENT
+    -alinhamento dos elementos dentro do container
+    -distribuição dos elementos
+
+    VALORES
+    -flex-start
+    -flex-end
+    -center
+    -space-around
+    -space-between
+    -space-evenly
+
 */
 
 /*DIREÇÃO DOS ITENS*/
@@ -29,6 +41,7 @@
     flex-flow: row wrap;
     */
     border: 1px dashed red;
+    justify-content:space-evenly ;/* JUSTIFY-CONTENT*/
 }
 
 .box div{
