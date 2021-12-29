@@ -2,25 +2,47 @@
     PROPRIEDADES PARA OS ITENS
     -flex-basis - por padrão é auto
     -flex-grow  - o crescimento do item dentro do container em relação aos espaços vazios.
-    -flex-shrink
+    -flex-shrink - o encolher do item dentro do container
     -flex
     -order
 */
 
+/*flex-BASIS*/
+/*
 .box{
     display:flex;
     border: 1px dashed red;
 }
 .box div{
     border: 1px solid plum;
-    /*flex-basis: 25%;*/
+    flex-basis: 25%;
 }
+*/
+
+/*-----------------------------------------------------------------*/
 
 /*flex-grow*/
+/*
 .box div:nth-child(2),
 .box div:nth-child(3){
     flex-grow: 1;
 }
 .box div:nth-child(1){
     flex-grow: 2;
+}*/
+
+/*-----------------------------------------------------------------*/
+
+/*flex-shirink*/
+.box{
+    display:flex;
+    border: 1px dashed red;
+    width: 160px;
+}
+.box div{
+    flex-basis: 100%;
+    border: 1px solid plum;
+}
+.box div:nth-child(2){
+    flex-shrink: 0;
 }
