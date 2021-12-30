@@ -1,0 +1,57 @@
+/*DESAFIO 01- HEADER MENU NAVIGATION
+    Crie o <header> de um site que contenha uma logo e um menu.
+    Um elemento deverá ficar ao lado do outro.
+    A logo que ficará na extrema esquerda e o menu ficará na extrema direita.
+    Os itens do menu ficarão um ao lado do outro, com um espaço de .8rem entre eles.
+    O último elemento do menu será um botão de contato e você poder utilizar o seletor: last-child para estilizar.
+*/
+header{
+    font-family: "Lato", sans-serif;
+}
+a{
+    text-decoration: none;
+    font-weight: bolder;
+    color:black;
+    font-size: larger;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+ul{
+    display: flex;
+    list-style: none;
+    gap: .8rem;
+    align-items:center;
+}
+ul li:last-child{
+    background: #4f0bce;
+    color: white;
+    font-weight: bold;
+    padding: .8rem;
+    border-radius: 4px;
+   
+}
+/*DESAFIO 02- LAYOUT COM 2 COLUNAS
+    Crie um layout com 2 colunas, uma ao lado da outra.
+    A coluna da esquerda deverá ter 25% de tamanho e a coluna da direita deverá ocupar todo o espaço que sobra.
+    Faça uma separação de 1rem entre os elementos.
+*/
+
+/*DESAFIO 03- 9 FOTOS EM 3 COLUNAS
+    Crie uma galeria de fotos onde teremos 3 colunas e 9 fotos.
+    Deixe um espaço de .8rem entre os elementos da galeria
+*/
+
+/*DESAFIO 04- IMAGEM DENTRO DE UM BOTãO
+    Crie um botão que contenha um ícone (img) e um texto.
+    Coloque um espaço de .4rem entre os elementos.
+*/
+
+/*DESAFIO 05- FOOTER
+    Crie o <footer> de um site que tenha a data de criação do site.
+    Usando flex, alinhe o elemento do footer bem ao meio.
+    Deixe uma altura de .8rem para o footer.
+    O footer deverá ficar no final da página.
+*/
