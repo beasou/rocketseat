@@ -78,6 +78,22 @@ img{
     Crie um botão que contenha um ícone (img) e um texto.
     Coloque um espaço de .4rem entre os elementos.
 */
+.botao{
+    display:flex;
+    align-items: center;
+    gap: .8rem;
+}
+button{
+    display:flex;
+    align-items: center;
+    color:white;
+    background: #4f0bce;
+    gap: .4rem;
+    border-radius: 3px;
+}
+button img{
+   width: 30px;
+}
 
 /*DESAFIO 05- FOOTER
     Crie o <footer> de um site que tenha a data de criação do site.
