@@ -98,6 +98,15 @@ button img{
 /*DESAFIO 05- FOOTER
     Crie o <footer> de um site que tenha a data de criação do site.
     Usando flex, alinhe o elemento do footer bem ao meio.
-    Deixe uma altura de .8rem para o footer.
+    Deixe uma altura de 8rem para o footer.
     O footer deverá ficar no final da página.
 */
+footer{
+    display: flex;
+    background-color: rgb(195, 194, 194);
+    height: 8rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 5px 0;
+    margin: .8rem 0 0 0;
+}
