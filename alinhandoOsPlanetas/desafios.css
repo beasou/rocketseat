@@ -44,7 +44,7 @@ ul li:last-child{
 }
 aside, main{
     border:1px gray solid;
-    height: 50vh;
+    height: 30vh;
 }
 aside{
     
@@ -59,6 +59,20 @@ main{
     Crie uma galeria de fotos onde teremos 3 colunas e 9 fotos.
     Deixe um espaço de .8rem entre os elementos da galeria
 */
+.fotos{
+    padding: .8rem 0 .8rem 0;
+    margin: 0;
+    display: grid;
+    gap: .8rem;
+    grid-template-areas:
+    "img img img" 
+    "img img img"
+    "img img img";
+}
+img{
+    width: 100%;
+    height: auto;
+}
 
 /*DESAFIO 04- IMAGEM DENTRO DE UM BOTãO
     Crie um botão que contenha um ícone (img) e um texto.
