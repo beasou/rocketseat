@@ -12,3 +12,8 @@ console.log(elemento.innerText)
 //innerHTML
 elemento.innerHTML = "Olá Devs! <small>!!!</small>"
 console.log(elemento.innerHTML)
+
+const element = document.querySelector('input')
+console.log(element.value) //consigo pegar o valor
+element.value = "Valor que eu quiser" //consigo atribuir valor
+console.log(element.value) 
