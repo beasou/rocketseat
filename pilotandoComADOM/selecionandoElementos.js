@@ -1,4 +1,4 @@
-//getElementById()
+/*//getElementById()
 const element = document.getElementById('blog-title')
 console.log(element)
 
@@ -13,8 +13,8 @@ console.log(element)
 //querySelector() (pesquisa pelo seletor o primeiro que acha na pag)
 const element = document.querySelector('p')
 console.log(element)
-
+*/
 //querySelectorAll (td que achar pelo seletor semelhante ao css)
-const elements = document.querySelectorAll('#blog-text')
+const elements = document.querySelectorAll('.blog-text')
 
 elements.forEach(el => console.log(el))
