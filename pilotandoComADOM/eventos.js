@@ -21,7 +21,17 @@ function print(){
 }*/
 
 //Adicionando eventos via JS (Outro método)
-h1.onmouseover = print
+/*h1.onmouseover = print
+function print(){
+    console.log('print')
+}*/
+
+//melhor metodo para executar as duas funcoes
+h1.addEventListener('mouseover', print)
 function print(){
     console.log('print')
 }
+
+h1.addEventListener('mouseover', function(){
+    console.log('outro momento')
+})
