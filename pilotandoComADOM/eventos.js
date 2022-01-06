@@ -35,3 +35,8 @@ function print(){
 h1.addEventListener('mouseover', function(){
     console.log('outro momento')
 })
+
+//Argumento event
+input.onkeydown = function(event){
+    console.log(event.key)//imprime tecla digitada
+}
