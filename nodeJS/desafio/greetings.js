@@ -1,0 +1,1 @@
+const getFlagValue = require('./flags')

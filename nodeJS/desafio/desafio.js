@@ -1,7 +1,7 @@
 /* Crie 2 arquivos Java Script.
     1- o primeiro, irá exportar uma função chamada getFlag()
         que receberá um argumento do tipo String.
-        essa função deverá buscar dentro do array a flag e retornar o valor da flag
+        essa função deverá buscar dentro do array process.argv a flag e retornar o valor da flag desejada, que é a string e retornar o valor da flag
 
         o segundo irá importar a função e passar a flag desejada.
 
