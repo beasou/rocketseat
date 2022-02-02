@@ -2,8 +2,8 @@
 
 const questions = [
     "O que aprendi hoje?",
-    "O que me deixou aborrecido? E o que posso fazer para melhorar",
-    "O que eu poderia fazer para melhorar?",
+    "O que me deixou aborrecido?",
+    "O que você poderia fazer para melhorar?",
     "O que me deixou feliz hoje?",
     "Quantas pessoas ajudei hoje?",
 ]
@@ -20,7 +20,25 @@ process.stdin.on("data", data =>{//ficar ouvindo enquanto tiver dados
     if(answers.length < questions.length){
         ask(answers.length)
     }else{
-        console.log(answers)
         process.exit()
     }
+})
+
+process.on('exit', () =>{
+    console.log(`
+        Bacana !
+
+        O que você aprendeu hoje foi:
+        ${answers[0]}
+
+        O que te aborreceu foi: ${answers[1]} e sua locução para melhorar foi,
+        ${answers[2]}
+
+        O que te deixou feliz hoje:
+        ${answers[3]}
+
+        Você ajudou ${answers[4]} pessoas hoje!!
+
+        Volte amanhã para novas reflexões
+    `)
 })
