@@ -13,3 +13,8 @@ const ask = (index = 0) => {
 }
 
 ask()
+
+process.stdin.on("data", data =>{//ficar ouvindo enquanto tiver dados
+    process.stdout.write(data.toString().trim() + '\n')
+    process.exit()
+})
