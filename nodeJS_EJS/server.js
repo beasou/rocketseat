@@ -5,11 +5,11 @@ app.set("view engine", "ejs") // a ferramenta que eu vou utilizar para redenriza
 
 //get é um metodo que esta dentro do express
 app.get("/", function (req, res){ //aqui está a rota "/"->dominio sem nada na frente
-    res.render("index")//a resposta é renderizar o index res=response
+    res.render("pages/index")//a resposta é renderizar o index res=response
 })
 
 app.get("/sobre", function (req, res){
-    res.render("about")
+    res.render("pages/about")
 })
 
 app.listen(8080) //função dentro do express que fica "ouvindo"
