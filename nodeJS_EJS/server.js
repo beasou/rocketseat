@@ -13,4 +13,4 @@ app.get("/sobre", function (req, res){
 })
 
 app.listen(8080) //função dentro do express que fica "ouvindo"
-console.log("Rodando")
+console.log("Servidor funcionando")
