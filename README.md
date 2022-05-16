@@ -4,3 +4,6 @@
 ##Discover - Guias estelares
 Trilha Fundamentar
 
+##Discover - 
+Trilha Especializar
+
