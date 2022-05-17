@@ -10,6 +10,8 @@ export function Home() {
           // o estado tem 2 elementos, onde guardar o conteudo do estado e qual é a função que atualiza esse estado
   const [students, setStudents] = useState([])
                     //a função que atualiza o estado
+  const [user,setUser] = useState({name:'', avatar:''})
+          // estado user que o valor padrão é um obj, que vai ter name e avatar iniciado como uma string vazia
 
   function handleAddStudent(){ //quando chamar essa função será criado um novo obj
     const newStudent = { //obj
@@ -27,20 +29,32 @@ export function Home() {
                 add [['Rodrigo'], 'Amanda'] -> o vetor fica dentro do vetor, precisa ficar fora assim -> ['Rodrigo', 'Amanda'].
                 */
   }
-  
+  /*
   useEffect(() => {
     //corpo do useEffect(Ações, op que eu qro que execute)
     console.log("useEffect foi chamado!")
   }, []); // se o array ficar vazio significa que não tem dependencia, será executado 1 vez ao renderizar a pagina. [students, setstudentName] => com dependencia será executado td vez que for chaamado, além do padrão que é ao ser carregado.
-  
+  */
+
+  useEffect(() =>{
+    fetch('https://api.github.com/users/beasou')
+    .then(response => response.json())
+    .then(data => {
+      setUser({
+        name:data.name,
+        avatar: data.avatar_url,
+      })
+    })
+  },[])
+
   return (
     // <> </> --> fragment tag vazia para embrulhar as outras q não podem sem exibidas sem um pai - entregues em um unico pacote
     <div className='container'> 
     <header>
       <h1>Lista de Presença</h1>
       <div>
-        <strong>Bea</strong>
-        <img src="https://github.com/beasou.png" alt="Foto de perfil"/>
+        <strong>{user.name}</strong>
+        <img src={user.avatar} alt="Foto de perfil"/>
       </div>
 
     </header>
