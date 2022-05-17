@@ -50,7 +50,13 @@ export function Home() {
 
      
       { // chave dentro do retorno é para usar o conteúdo de uma variavel
-        students.map(student => <Card name={student.name} time={student.time}/>)
+        students.map(student => (
+          <Card
+             
+            name={student.name} 
+            time={student.time}
+          />
+        ))
       }
     </div> 
 
