@@ -1,4 +1,5 @@
 //uso o type pra definir que tipo a variavel é sem precisar ficar reescrevendo as mesmas propriedades em outra variavel, melhor pra reutilizar
+//considere nomear tipos com letra maiuscula
 type IdType = string | number | undefined
 
 let userId: IdType
