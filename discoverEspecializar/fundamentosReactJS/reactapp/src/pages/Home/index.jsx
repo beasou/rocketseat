@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-           //use state permite que criamos estado    
+           //use state é um hook permite que criamos estado  
+            //*HOOKS = funções que permite vc ligar, conectar os recursos de estado e ciclo de vida do react, a partir de componentes totalmente funcionais
 import './style.css'
 import {Card} from '../../components/Card'
 
@@ -37,7 +38,15 @@ export function Home() {
   return (
     // <> </> --> fragment tag vazia para embrulhar as outras q não podem sem exibidas sem um pai - entregues em um unico pacote
     <div className='container'> 
-    <h1>Lista de Presença</h1>
+    <header>
+      <h1>Lista de Presença</h1>
+      <div>
+        <strong>Bea</strong>
+        <img src="https://github.com/beasou.png" alt="Foto de perfil"/>
+      </div>
+
+    </header>
+    
 
       <input  type="text" 
               placeholder="Digite o nome..."
