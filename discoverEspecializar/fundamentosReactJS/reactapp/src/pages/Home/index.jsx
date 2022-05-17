@@ -36,7 +36,7 @@ export function Home() {
   }, []); // se o array ficar vazio significa que não tem dependencia, será executado 1 vez ao renderizar a pagina. [students, setstudentName] => com dependencia será executado td vez que for chaamado, além do padrão que é ao ser carregado.
   */
 
-  useEffect(() =>{
+/*  useEffect(() =>{ //vc não consegue usar async no usserEffect
     fetch('https://api.github.com/users/beasou')
     .then(response => response.json())
     .then(data => {
@@ -45,6 +45,20 @@ export function Home() {
         avatar: data.avatar_url,
       })
     })
+  },[]) */
+
+  //USANDO ASYNC
+  useEffect(() =>{
+    async function fetchData(){
+      const response = await fetch('https://api.github.com/users/beasou')
+      const data = await response.json()
+      console.log("Dados => ", data)
+      setUser({
+        name:data.name,
+        avatar: data.avatar_url,
+      })
+    }
+    fetchData()
   },[])
 
   return (
