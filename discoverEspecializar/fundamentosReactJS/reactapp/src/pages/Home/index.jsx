@@ -52,7 +52,7 @@ export function Home() {
       { // chave dentro do retorno é para usar o conteúdo de uma variavel
         students.map(student => (
           <Card
-             
+            key={student.time}
             name={student.name} 
             time={student.time}
           />
