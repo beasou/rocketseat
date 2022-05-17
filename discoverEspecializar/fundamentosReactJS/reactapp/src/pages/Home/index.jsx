@@ -52,7 +52,7 @@ export function Home() {
       { // chave dentro do retorno é para usar o conteúdo de uma variavel
         students.map(student => (
           <Card
-            key={student.time}
+            key={student.time} //chave tem que ser unica, pode ser id, recomendado quando se tem componentes que são gerados a partir de uma estrutura de repetição.
             name={student.name} 
             time={student.time}
           />
