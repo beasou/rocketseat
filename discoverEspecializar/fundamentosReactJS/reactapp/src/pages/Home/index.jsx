@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
            //use state é um hook permite que criamos estado  
             //*HOOKS = funções que permite vc ligar, conectar os recursos de estado e ciclo de vida do react, a partir de componentes totalmente funcionais
 import './style.css'
@@ -27,13 +27,11 @@ export function Home() {
                 add [['Rodrigo'], 'Amanda'] -> o vetor fica dentro do vetor, precisa ficar fora assim -> ['Rodrigo', 'Amanda'].
                 */
   }
-
- /*let studentName=""
-
-  function handleNameChange(name){
-    
-    studentName = name
-  }*/
+  
+  useEffect(() => {
+    //corpo do useEffect(Ações, op que eu qro que execute)
+    console.log("useEffect foi chamado!")
+  }, []); // se o array ficar vazio significa que não tem dependencia, será executado 1 vez ao renderizar a pagina. [students, setstudentName] => com dependencia será executado td vez que for chaamado, além do padrão que é ao ser carregado.
   
   return (
     // <> </> --> fragment tag vazia para embrulhar as outras q não podem sem exibidas sem um pai - entregues em um unico pacote
