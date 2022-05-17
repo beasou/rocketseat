@@ -20,7 +20,7 @@ let info: PlayerInfo ={ //posso tirar um ou outro para testar que as propriedade
 }
 
 
-///---- DA PARA FAZER ASSIM TBM
+///---- DA PARA FAZER ASSIM TBM, definindo o objeto na hora da união
 type PlayerInfo1 = User & {
     nickname:string,
     level: number
