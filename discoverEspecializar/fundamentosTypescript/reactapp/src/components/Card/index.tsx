@@ -1,11 +1,12 @@
 import './styles.css';
 
-type CardProps ={
+export type CardProps ={ //crio uma tipagem para corrigir o erro do props não ter tipagem
     name: string
     time: string
 }
 
-export function Card(props: CardProps){
+export function Card(props: CardProps){ //add a tipagem em props 
+//exporto essa função para ser utilizada na Home
     return(
         <div className="card">
             <strong>{props.name}</strong>
@@ -13,15 +14,3 @@ export function Card(props: CardProps){
         </div>
     )
 }
-
-/*
-    OUTRA OPÇÃO SE TRATANDO DE PROPRIEDADES
-    export function Card({ name, time }){
-    return(
-        <div className="card">
-            <strong>{name}</strong>
-            <small>{time}</small>
-        </div>
-    )
-}
-*/
