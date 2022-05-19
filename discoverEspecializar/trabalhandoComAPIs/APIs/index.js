@@ -21,3 +21,13 @@ app.route('/sobre').get((req, res) => res.send("Rota sobre"))
 app.route('/contato').post((req, res)=>{console.log(req.body)})//pedindo o corpo da requisição
 //ao fazer a solicitação no navegador da erro pois ele não encontra o get o navegador não consegue fazer o post.
 //conteudo utilçizado em o insomia
+
+
+//----METODO PUT --->
+//serve geralmente para editar informações
+let author = "Bea"
+app.route('/t').get((req, res)=>req.send(author))
+app.route('/t').put((req, res)=>{
+    author = req.body.author //author recebe o que vem da requisição para auterar o q estava em author anteriormente
+    res.send(author)
+})
