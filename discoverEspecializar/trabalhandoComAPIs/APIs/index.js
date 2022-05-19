@@ -40,3 +40,6 @@ app.route('/delete:identificador').delete((req, res)=>{
     req.send(req.params.identificador)//exibir o que passou aqui a variavel passada pela url
     //quando recebemos uma variavel pela url chamamos de params
 })
+
+// O que são parâmetros nas requisições
+//https://blog.rocketseat.com.br/tipos-de-parametros-nas-requisicoes-rest/
