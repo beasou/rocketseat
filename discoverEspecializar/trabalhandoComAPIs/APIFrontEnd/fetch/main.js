@@ -18,5 +18,26 @@ function getUser(){
     .catch(error => console.error(error))
 }
 
+function addUser(newUser){
+    fetch(url, {
+        method:"POST", //o metodo q eu quero
+        body: JSON.stringify(newUser), //o que eu vou passar para a url
+        headers: {
+            "Content-type":"application/json; charset=UTF-8"
+        }
+    })
+    .then(response => response.json())
+    .then(data => alertApi.textContent = data)
+    .catch(error => console.error(error))
+}
+
+const newUser ={
+    name: "Beatriz Souza",
+    avatar: "https://avatars.githubusercontent.com/u/8356862?v=4",
+    city:"Rio do Sul"
+
+}
+
+addUser(newUser)
 getUsers()
 getUser()
