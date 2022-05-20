@@ -7,7 +7,7 @@ app.listen('3000') //usando o metodo listen do express para ouvir a porta 3000
 
 //posso pegar esse aquivo todo e jogar em um arquivo server tbm
 
-//middleware
+//middleware - vai transformar tudo que está chegando da API em json
 app.use(express.json())//json é um metodo dentro do express
 
 //----REQUISIÇÃO GET --->
@@ -43,3 +43,24 @@ app.route('/delete:identificador').delete((req, res)=>{
 
 // O que são parâmetros nas requisições
 //https://blog.rocketseat.com.br/tipos-de-parametros-nas-requisicoes-rest/
+
+
+
+//--------Parametro body
+//envia as informações no corpo da requisição 
+app.use() //middleware
+app.route('/').post((req, res) => {
+    const {nome, cidade} = req.body //atribuo o corpo da requisição a nome e cidade e agora posso usar direto, ao invez de 
+    res.send(`Meu nome é: ${nome} e minha cidade é: ${cidade}`)//(req.body.nome)
+})
+/* no insomia utilizando metodo Post
+    {
+        "nome": "bea",
+        "cidade": "são paulo"
+        "livros_favoritos":[
+            "o simarillon"
+            "codigo limpo"
+            "essencialismo"
+        ]
+    }
+*/
