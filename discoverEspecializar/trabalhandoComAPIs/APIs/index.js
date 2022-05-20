@@ -80,3 +80,11 @@ app.route('/:variavel').get((req, res) => res.send(req.params.variavel))
         ]
     }
 */
+
+//--------Parametro Query (get)
+// os   quqerys são identioficados na url pelo ?variavel=valor
+app.route('/').get((req, res) => res.send(req.query)) //req.query devolve tds variaveis que colocar / req.query.exemplo, somente a variavel exemplo
+
+//ao colocar na url  http://localhost:3000/?nome=bea
+//mais de 1 variavel--> http://localhost:3000/?nome=bea&exemplo=exemplo
+//ao dar send saida = {"nome": "bea"}
