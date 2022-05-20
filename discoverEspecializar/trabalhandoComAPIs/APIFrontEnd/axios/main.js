@@ -16,11 +16,25 @@ function addNewUser(newUser){
     .catch(error => console.error(error))
 }
 
+function getUser(id){
+    axios.get(`${url}/${id}`)
+    .then(response =>{
+        const {name, city, id, avatar} = response.data
+        userName.textContent = name
+        userCity.textContent = city
+        userId.textContent = id
+        userAvatar.src = avatar
+
+    })
+    .catch(error => console.error(error))
+}
+
 const newUser = {
     name: "Bea Sou",
     avatar: "https://avatars.githubusercontent.com/u/8356862?v=4",
     city: "Rio de Janeiro "
 }
 
+getUser(2)
 //addNewUser(newUser)
 getUsers()
