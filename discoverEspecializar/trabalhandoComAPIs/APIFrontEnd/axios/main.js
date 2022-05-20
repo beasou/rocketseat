@@ -53,8 +53,8 @@ const userUpdated = {
     city: "Rio de Janeiro "
 }
 
-deleteUser(1)
+//deleteUser(1)
 //updateUser(2, userUpdated)
-getUser(2)
+//getUser(2)
 //addNewUser(newUser)
-getUsers()
+//getUsers()
