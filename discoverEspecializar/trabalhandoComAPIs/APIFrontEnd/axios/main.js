@@ -35,6 +35,12 @@ function updateUser(id, userUpdated){
     .catch(error => console.error(error))
 }
 
+function deleteUser(id){
+    axios.delete(`${url}/${id}`)
+    .then(response => console.log(response))
+    .catch(error => console.error(error))
+}
+
 const newUser = {
     name: "Bea Sou",
     avatar: "https://avatars.githubusercontent.com/u/8356862?v=4",
@@ -47,7 +53,8 @@ const userUpdated = {
     city: "Rio de Janeiro "
 }
 
-updateUser(2, userUpdated)
+deleteUser(1)
+//updateUser(2, userUpdated)
 getUser(2)
 //addNewUser(newUser)
 getUsers()
