@@ -46,7 +46,7 @@ app.route('/delete:identificador').delete((req, res)=>{
 
 
 
-//--------Parametro body
+//--------Parametro body (post, put e patch)
 //envia as informações no corpo da requisição 
 app.use() //middleware
 app.route('/').post((req, res) => {
@@ -54,6 +54,22 @@ app.route('/').post((req, res) => {
     res.send(`Meu nome é: ${nome} e minha cidade é: ${cidade}`)//(req.body.nome)
 })
 /* no insomia utilizando metodo Post
+    {
+        "nome": "bea",
+        "cidade": "são paulo"
+        "livros_favoritos":[
+            "o simarillon"
+            "codigo limpo"
+            "essencialismo"
+        ]
+    }
+*/
+
+
+//--------Parametro route (get)
+app.route('/:variavel').get((req, res) => res.send(req.params.variavel))
+//depois do barra vai virar uma variavel chamada nome nop res.send irá retornar a variavel informada apos /
+/* no insomia utilizando metodo get
     {
         "nome": "bea",
         "cidade": "são paulo"
