@@ -44,6 +44,18 @@ function updateUser(updatedUsers, id){
     .catch(error => console.error(error))
 }
 
+function deleteUser(id){
+    fetch(`${url}/${id}`,{
+        method:"DELETE",
+        headers:{
+            "Content-type" : "application/json; charset=UTF-8"
+        }
+    })
+    .then(response => response.json())
+    .then(data => alertApi.textContent = data)
+    .catch(error=> console.error(error))
+}
+
 const newUser = {
     name: "Beatriz Souza",
     avatar: "https://avatars.githubusercontent.com/u/8356862?v=4",
@@ -59,7 +71,9 @@ const updatedUser = {
     city: "Rio de Janeiro"
 }
 
-updateUser(updatedUser, 7)
+//updateUser(updatedUser, 7)
+
+//deleteUser(7)
 
 getUsers()
 getUser(7)
