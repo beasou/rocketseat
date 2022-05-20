@@ -75,5 +75,5 @@ const updatedUser = {
 
 //deleteUser(7)
 
-getUsers()
-getUser(7)
+//getUsers()
+//getUser(7)
