@@ -1,5 +1,3 @@
 import React from 'react';
+import {} from './App'
 
-function App(){
-    return <h1>Hello Word</h1>
-}
