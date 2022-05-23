@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports ={
     module:'development', //modulo pra deixar a execução do webpack mais rapida
     //entry: 'src/index.js' //devido a particularidade do OS, vamos utilizar require('path')
+    devtool:'eval-source-map',
     entry: path.resolve(__dirname,'src', 'index.jsx'), //__dirname, vai pegar o diretorio q coloquei a instrução
     output:{
         path: path.resolve(__dirname, 'dist'),
