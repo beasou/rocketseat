@@ -12,6 +12,9 @@ module.exports ={
     resolve:{
         extensions: ['.js', '.jsx'] //pode ler tanto uma extenção quanto a outra
     },
+    devServer: {
+        static: path.resolve(__dirname, 'public'),
+    },
     plugins:[
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname,'public','index.html') //qual arquivo de templete q ele vai utilizar para gerar o html, que é o index.html
