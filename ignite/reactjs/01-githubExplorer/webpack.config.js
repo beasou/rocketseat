@@ -8,13 +8,13 @@ module.exports ={
     mode: isDevelopment ? 'development' : 'production', //modulo pra deixar a execução do webpack mais rapida
     //entry: 'src/index.js' //devido a particularidade do OS, vamos utilizar require('path')
     devtool: isDevelopment ? 'eval-source-map' : 'source-map',
-    entry: path.resolve(__dirname,'src', 'index.jsx'), //__dirname, vai pegar o diretorio q coloquei a instrução
+    entry: path.resolve(__dirname,'src', 'index.tsx'), //__dirname, vai pegar o diretorio q coloquei a instrução
     output:{
         path: path.resolve(__dirname, 'dist'),
         filename:'bundle.js'
     },
     resolve:{
-        extensions: ['.js', '.jsx'] //pode ler tanto uma extenção quanto a outra
+        extensions: ['.js', '.jsx', '.ts', '.tsx'] //pode ler tanto uma extenção quanto a outra
     },
     devServer: {
         static: path.resolve(__dirname, 'public'),
@@ -29,7 +29,7 @@ module.exports ={
     module:{
         rules: [
             {
-                test: /\.jsx$/, //recebe uma expressao regular para conf se é um arquivo js ou não
+                test: /\.(j|t)sx$/, //recebe uma expressao regular para conf se é um arquivo js ou não
                 exclude:/node_modules/,
                 use: {
                     loader: 'babel-loader',//converter usando babel
