@@ -28,6 +28,11 @@ module.exports ={
                 test: /\.jsx$/, //recebe uma expressao regular para conf se é um arquivo js ou não
                 exclude:/node_modules/,
                 use: 'babel-loader', //converter usando babel
+            },
+            {
+                test: /\.css$/, //recebe uma expressao regular para conf se é um arquivo css ou não
+                exclude:/node_modules/,
+                use: ['style-loader', 'css-loader'], //converter usando babel
             }
         ],
     }
