@@ -30,9 +30,9 @@ module.exports ={
                 use: 'babel-loader', //converter usando babel
             },
             {
-                test: /\.css$/, //recebe uma expressao regular para conf se é um arquivo css ou não
+                test: /\.scss$/, //recebe uma expressao regular para conf se é um arquivo css ou não
                 exclude:/node_modules/,
-                use: ['style-loader', 'css-loader'], //converter usando babel
+                use: ['style-loader', 'css-loader', 'sass-loader'], //converter usando babel
             }
         ],
     }
