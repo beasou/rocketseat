@@ -12,7 +12,6 @@ export function Home() {
                     //a função que atualiza o estado
   const [user,setUser] = useState({name:'', avatar:''})
           // estado user que o valor padrão é um obj, que vai ter name e avatar iniciado como uma string vazia
-
   function handleAddStudent(){ //quando chamar essa função será criado um novo obj
     const newStudent = { //obj
       name: studentName, //o nome do estado, onde ele está amarzenado
@@ -20,6 +19,7 @@ export function Home() {
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit',
+        
       })
     }
     setStudents(prevState => [...prevState, newStudent]) //add o obj no estado set setStudents
@@ -36,7 +36,7 @@ export function Home() {
   }, []); // se o array ficar vazio significa que não tem dependencia, será executado 1 vez ao renderizar a pagina. [students, setstudentName] => com dependencia será executado td vez que for chaamado, além do padrão que é ao ser carregado.
   */
 
-/*  useEffect(() =>{ //vc não consegue usar async no usserEffect
+/*  useEffect(() =>{ //vc não consegue usar async dessa mesma forma no usserEffect
     fetch('https://api.github.com/users/beasou')
     .then(response => response.json())
     .then(data => {

@@ -66,4 +66,4 @@ newState2.set('blablabla')
 function useState3<T extends number | string = string>(){ //posso deixar padrão string ou number depois do sinal de = 
 //...cód
 }
-let newState3 = useState1() //se aqui um padrão não for definido
+let newState3 = useState3() //se aqui um padrão não for definido
