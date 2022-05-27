@@ -16,21 +16,21 @@ export function TaskList() {
 
   function handleCreateNewTask() {
     // Crie uma nova task com um id random, não permita criar caso o título seja vazio.
-    const newTask ={
-      id: Math.floor(Math.random() * 100),
-      title: newTaskTitle,
-      isComplete: Boolean()
-    }      
-    if(newTask.title == ""){
-      alert('digita algo ai')
-    }else{
+      if(!newTaskTitle)return alert("Digita algo ai")
+
+      const newTask ={
+        id: Math.floor(Math.random() * 100),
+        title: newTaskTitle,
+        isComplete: Boolean()
+      }      
       setTasks(prevState => [...prevState, newTask])
-      console.log(newTask)
-    }
+      setNewTaskTitle('')
+    console.log(newTask)
   }
 
   function handleToggleTaskCompletion(id: number) {
     // Altere entre `true` ou `false` o campo `isComplete` de uma task com dado ID
+    
   }
 
   function handleRemoveTask(id: number) {
