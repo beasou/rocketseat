@@ -63,7 +63,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
         productExists.amount = amount;
       }else{
         //se não esta, vai add o produto ao carrinho 
-        const product = await api.get(`/produts/${productId}`);
+        const product = await api.get(`/products/${productId}`);
 
         const newProduct = { //o Product(/types.ts) espera receber um amount, o retorno da api protutos é id,title,price,image. Então add 1
           ...product.data,
@@ -77,7 +77,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       Como primeiro argumento você deve informar o nome que você quer dar para o registro, no caso desse desafio 
       é obrigatório utilizar o nome @RocketShoes:cart. Já o segundo argumento é o valor do registro que obrigatoriamente 
       precisa estar no formato string. */
-      localStorage.setItem('@RocketShoes:cart', JSON.stringify(cart)) 
+      localStorage.setItem('@RocketShoes:cart', JSON.stringify(updatedCart)) 
     } catch {
       /* TODO: Capturar utilizando trycatch os erros que ocorrerem ao longo do método e, no catch, 
       utilizar método error da react-toastify com a seguinte mensagem:*/
