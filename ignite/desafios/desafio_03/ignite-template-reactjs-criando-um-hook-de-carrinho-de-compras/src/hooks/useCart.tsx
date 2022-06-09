@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext, useEffect, useState } from 'react';
+import { createContext, ReactNode, useContext, useEffect, useRef, useState } from 'react';
 import { toast } from 'react-toastify';
 import { api } from '../services/api';
 import { Product, Stock } from '../types';
@@ -30,6 +30,21 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
 
     return [];
   });
+
+  /*Para preservar os dados do carrinho mesmo se fecharmos a aplicação, utilizaremos a localStorage API */
+  const prevCarRef = useRef<Product[]>() //referencia
+
+  useEffect(()=>{ //vai rodas todas as vezes que renderizar novamente
+    prevCarRef.current = cart
+  })//pra rodar td vez, não passo nd no array de dependencia
+
+  const cartPreviousValue = prevCarRef.current ?? cart //vai pegar prevCarRef.current se ele existir, pois ele retorna a primeira vez como um undefined, e isso não pode acontecer, pois quando rodar a verificação de cartPreviousValue, ele vai entender que é diferente e vai dat um setItem(atualizar). Então se for undefined ou null(false), ele vai atribuir o valor de card na primeira passagem, depois ele atribui o prevCarRef.current
+
+  useEffect(()=>{ //comparação
+    if (cartPreviousValue !== cart){ //valor anterior do carrinho é diferente do atual, significa que teve uma atualização do carrinho ele aplica o setItem
+      localStorage.setItem('@RocketShoes:cart', JSON.stringify(cart))
+    }
+  }, [cart, cartPreviousValue])
 
   const addProduct = async (productId: number) => {
     try {
@@ -77,7 +92,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       Como primeiro argumento você deve informar o nome que você quer dar para o registro, no caso desse desafio 
       é obrigatório utilizar o nome @RocketShoes:cart. Já o segundo argumento é o valor do registro que obrigatoriamente 
       precisa estar no formato string. */
-      localStorage.setItem('@RocketShoes:cart', JSON.stringify(updatedCart)) 
+    //  localStorage.setItem('@RocketShoes:cart', JSON.stringify(updatedCart)) 
     } catch {
       /* TODO: Capturar utilizando trycatch os erros que ocorrerem ao longo do método e, no catch, 
       utilizar método error da react-toastify com a seguinte mensagem:*/
@@ -95,7 +110,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       if(productIndex >= 0){ //se o findIndex não encontra retorna -1, então se encontrou o productIndex seria = ou maior que 0
         updatedCart.splice(productIndex, 1)//splice(onde quero começar a deletar, a quantidade de itens que quero deletar)
         setCart(updatedCart)
-        localStorage.setItem('@RocketShoes:cart', JSON.stringify(updatedCart)) 
+      //  localStorage.setItem('@RocketShoes:cart', JSON.stringify(updatedCart)) 
       }else{// se não encontrou
         throw Error() //forço a dar erro ai ele cai no catch
       }
@@ -136,7 +151,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       if(productExists){ //se o produto existe
         productExists.amount = amount
         setCart(updatedCart)
-        localStorage.setItem('@RocketShoes:cart', JSON.stringify(updatedCart)) 
+     //   localStorage.setItem('@RocketShoes:cart', JSON.stringify(updatedCart)) 
       } else{ // se não encontrar, se ñ existe
         throw Error() //forço a dar erro, pois se é um update tem q ter algo pra ser alterado
       }
