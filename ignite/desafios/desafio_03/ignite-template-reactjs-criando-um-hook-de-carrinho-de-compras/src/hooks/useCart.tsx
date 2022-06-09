@@ -108,13 +108,40 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
 
   const updateProductAmount = async ({
     productId,
-    amount,
-  }: UpdateProductAmount) => {
+    amount, //aqui ja é o valor desejado
+  }: UpdateProductAmount) => { /*Deve atualizar a quantidade de um produto no carrinho. 
+  Porém, é preciso verificar algumas coisas:
+    . O valor atualizado do carrinho deve ser perpetuado no localStorage utilizando o método setItem.
+    . Se a quantidade do produto for menor ou igual a zero, sair da função updateProductAmount instantaneamente.
+    . 
+  */
     try {
-      // TODO
-      toast.error('Quantidade solicitada fora de estoque');
+      // TODO: Verificar se existe no estoque a quantidade desejada do produto. Caso contrário, utilizar o método error da react-toastify com a seguinte mensagem toast.error('Quantidade solicitada fora de estoque');:
+      if(amount <= 0){ //se a quantia for menor ou igual a 0,
+        return; //sair sem alterar nada
+      }
+
+      //VERIFICAÇÃO DO ESTOQUE 
+      const stock = await api.get(`/stock/${productId}`)
+      const stockAmount = stock.data.amount
+      
+      if(amount > stockAmount){
+        toast.error('Quantidade solicitada fora de estoque');
+        return //cancelar a execução
+      }
+
+      const updatedCart = [...cart]
+      const productExists = updatedCart.find(product => product.id === productId)
+
+      if(productExists){ //se o produto existe
+        productExists.amount = amount
+        setCart(updatedCart)
+        localStorage.setItem('@RocketShoes:cart', JSON.stringify(updatedCart)) 
+      } else{ // se não encontrar, se ñ existe
+        throw Error() //forço a dar erro, pois se é um update tem q ter algo pra ser alterado
+      }
     } catch {
-      // TODO
+      // TODO: Capturar utilizando trycatch os erros que ocorrerem ao longo do método e, no catch, utilizar o método error da react-toastify com a seguinte mensagem:
       toast.error('Erro na alteração de quantidade do produto');
     }
   };
