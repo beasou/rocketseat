@@ -88,8 +88,20 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
   const removeProduct = (productId: number) => {
     try {
       // TODO
+      const updatedCart =[... cart]
+      const productIndex = updatedCart.findIndex(product => product.id === productId)
+      
+      //se ele encontrou
+      if(productIndex >= 0){ //se o findIndex não encontra retorna -1, então se encontrou o productIndex seria = ou maior que 0
+        updatedCart.splice(productIndex, 1)//splice(onde quero começar a deletar, a quantidade de itens que quero deletar)
+        setCart(updatedCart)
+        localStorage.setItem('@RocketShoes:cart', JSON.stringify(updatedCart)) 
+      }else{// se não encontrou
+        throw Error() //forço a dar erro ai ele cai no catch
+      }
+
     } catch {
-      // TODO
+      // TODO: mensagem de erro 
       toast.error('Erro na remoção do produto');
     }
   };
